@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="js/gate.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anchor: one place for a career search | Sabrina May</title>
+<meta name="description" content="Case study: Anchor is a centralized career platform for the University of Michigan School of Information that brings job boards, mentorship, and events into one tool.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=IBM+Plex+Mono:wght@500;600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body class="page-case page-anchor">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-bar site-bar--case">
+  <div class="container site-bar-inner">
+    <a class="site-home" href="index.html">&larr; All work</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html#why-roblox">Why Roblox</a>
+      <a class="nav-cta" href="resume/Sabrina_May_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- Hero -->
+  <section class="tea-hero" aria-labelledby="an-hero-title">
+    <div class="container tea-hero-grid">
+      <div class="tea-hero-text">
+        <p class="eyebrow">Case study 02</p>
+        <h1 id="an-hero-title" class="tea-hero-title">Anchor: <span class="gold">one place</span> for a career search that lived in six tabs</h1>
+        <p class="tea-hero-sub">Sabrina May, UX researcher and designer, University of Michigan client project</p>
+        <dl class="tea-hero-facts">
+          <div><dt>The goal</dt><dd>Help UMSI students find internships and jobs with less cognitive load.</dd></div>
+          <div><dt>Impact</dt><dd>75% said the mentorship feature improved their networking. Most reported reduced cognitive load.</dd></div>
+        </dl>
+      </div>
+      <div class="an-fan">
+        <div class="an-phone"><video data-type='video/mp4; codecs="hvc1"' src="images/anchor/feed.mp4" poster="images/anchor/feed-still.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Anchor Feed screen recording"></video></div>
+        <div class="an-phone"><video data-type='video/mp4; codecs="hvc1"' src="images/anchor/event.mp4" poster="images/anchor/event-still.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Anchor Events screen recording"></video></div>
+        <div class="an-phone"><video data-type='video/mp4; codecs="hvc1"' src="images/anchor/job.mp4" poster="images/anchor/job-still.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Anchor Jobs screen recording"></video></div>
+        <div class="an-phone"><video data-type='video/mp4; codecs="hvc1"' src="images/anchor/mentor.mp4" poster="images/anchor/mentor-still.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Anchor Mentor screen recording"></video></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Opening human moment -->
+  <figure class="an-opening">
+    <div class="container">
+      <blockquote><p>&ldquo;I read the careers page three times before I gave up and asked another student.&rdquo;</p></blockquote>
+      <figcaption>International student, interview participant.</figcaption>
+    </div>
+  </figure>
+
+  <!-- TL;DR on a sky stage -->
+  <header class="sky-stage" aria-labelledby="cs-title">
+    <div class="container">
+      <p class="eyebrow tl-eyebrow">Case study 02</p>
+      <h2 id="cs-title" class="cs-title">Anchor: career platform for UMSI students</h2>
+      <p class="cs-summary">Anchor is a centralized career platform for the University of Michigan School of Information that brings job boards, mentorship, and events into one tool built around how students actually search.</p>
+      <ul class="meta-pills" role="list" style="padding-top: 20px; padding-bottom: 20px">
+        <li class="pill"><span class="pill-label">Role</span><span class="pill-value">UX researcher and designer</span></li>
+        <li class="pill"><span class="pill-label">Team</span><span class="pill-value">4 UX designers</span></li>
+        <li class="pill"><span class="pill-label">Client</span><span class="pill-value">UMSI</span></li>
+        <li class="pill"><span class="pill-label">Timeline</span><span class="pill-value">Fall 2024, 3.5 months</span></li>
+        <li class="pill"><span class="pill-label">Methods</span><span class="pill-value">Stakeholder interviews, student interviews, competitive analysis, journey mapping, usability testing</span></li>
+        <li class="pill"><span class="pill-label">Tools</span><span class="pill-value">Figma, FigJam</span></li>
+      </ul>
+      <figure class="figure app-fig" id="an-hero-mock">
+<section class="tea-banner an-hero" aria-label="Anchor, a career platform for UMSI students: the feed, mentorship, and events surfaces">
+  <div class="hm-back" aria-hidden="true">
+    <span class="tag">One calendar across three offices</span>
+    <div class="win"><div class="win__bar"><i></i><i></i><i></i></div><img src="images/anchor/hifi-events.jpg" alt=""></div>
+  </div>
+  <div class="hm-main" aria-hidden="true">
+    <div class="win"><div class="win__bar"><i></i><i></i><i></i><span>Anchor</span></div>
+      <div class="shot">
+        <img src="images/anchor/hifi-feed.jpg" alt="">
+        <div class="pin" style="left: 53%; top: 31%;"><b>1</b><span>Peers and alumni in one feed</span></div>
+        <div class="pin" style="left: 31%; top: 49%;"><b>2</b><span>Saved jobs and groups, one tap away</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="hm-front" aria-hidden="true">
+    <span class="tag">Mentors filtered by what you need</span>
+    <div class="win"><div class="win__bar"><i></i><i></i><i></i></div><img src="images/anchor/hifi-mentor.jpg" alt=""></div>
+  </div>
+</section>
+        <figcaption>Anchor's Feed, Mentorship, and Events, from the final prototype.</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <section class="results-band" aria-label="Results">
+    <div class="container">
+      <ul class="results" role="list">
+        <li><span class="r-num r-mint">75%</span><span class="r-label">said the mentorship feature improved their networking experience</span></li>
+        <li><span class="r-num r-mint">Most</span><span class="r-label">reported reduced cognitive load navigating their career search</span></li>
+        <li><span class="r-num r-yellow">3</span><span class="r-label">design changes driven directly by testing</span></li>
+      </ul>
+      <p class="r-foot">Moderated usability testing with 8 UMSI students on the low-fi prototype.</p>
+    </div>
+  </section>
+
+  <section class="roles-section" aria-label="Roles">
+    <div class="container">
+      <div class="role-split">
+        <section class="role role--me" aria-labelledby="role-me">
+          <h2 id="role-me" class="role-title"><span class="block-icon" aria-hidden="true"></span>What I did</h2>
+          <ul>
+            <li>Led the student interviews</li>
+            <li>Built the current-state journey map</li>
+            <li>Owned the Mentorship flow end to end</li>
+            <li>Researched and designed across synthesis, IA, and testing</li>
+          </ul>
+        </section>
+        <section class="role role--team" aria-labelledby="role-team">
+          <h2 id="role-team" class="role-title"><span class="block-icon block-icon--gray" aria-hidden="true"></span>What the team did</h2>
+          <ul>
+            <li>Ciani Foy, Feyi Apampa, and Niket Kamat Satoskar co-designed the research synthesis, information architecture, user flows, screens, and design system.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process timeline -->
+  <section class="process" aria-labelledby="process-label">
+    <div class="tl2-floor" aria-hidden="true"><div class="tl2-plane"></div></div>
+    <div class="container">
+      <div class="tl2-head">
+        <div>
+          <p class="eyebrow">Process at a glance</p>
+          <h2 id="process-label" class="tl2-title">A double diamond in 12 weeks: understand the problem, then design the fix.</h2>
+        </div>
+        <ul class="tl2-legend" role="list">
+          <li><span class="gblock gblock--y" aria-hidden="true"></span>Mine</li>
+        </ul>
+      </div>
+      <div class="tl2-lanes" aria-hidden="true"><span class="lane-h lane-h--r">Discover and define</span><span class="lane-h lane-h--d">Develop and deliver</span></div>
+      <ol class="tl2" role="list">
+        <li class="tl-step tl-r" style="--row: 1 / span 2; --i: 0">
+          <div class="tl-card">
+            <span class="tl-marker gblock" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 01</span><span class="lane-tag">Discover, weeks 1 to 3</span><span class="tl-pill">Team</span></p>
+            <p class="tl-main"><strong class="tl-title">Secondary research</strong></p>
+          </div>
+        </li>
+        <li class="tl-step tl-r" style="--row: 3 / span 2; --i: 1">
+          <div class="tl-card">
+            <span class="tl-marker gblock" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 02</span><span class="lane-tag">Discover, weeks 1 to 3</span><span class="tl-pill">Team</span></p>
+            <p class="tl-main"><strong class="tl-title">Stakeholder interviews</strong> <span class="tl-detail">3 offices, 5 staff</span></p>
+          </div>
+        </li>
+        <li class="tl-step tl-r" style="--row: 5 / span 2; --i: 2">
+          <div class="tl-card">
+            <span class="tl-marker gblock" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 03</span><span class="lane-tag">Discover, weeks 1 to 3</span><span class="tl-pill">Team</span></p>
+            <p class="tl-main"><strong class="tl-title">Competitive analysis</strong> <span class="tl-detail">5 platforms</span></p>
+          </div>
+        </li>
+        <li class="tl-step tl-r" style="--row: 7 / span 2; --i: 3">
+          <div class="tl-card is-mine">
+            <span class="tl-marker gblock gblock--y" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 04</span><span class="lane-tag">Define, weeks 4 to 5</span><span class="tl-pill tl-pill--mine">I led</span></p>
+            <p class="tl-main"><strong class="tl-title">Student interviews</strong> <span class="tl-detail">8 participants</span></p>
+          </div>
+          <p class="tl-note tl-note--left">Students said what the data couldn't.</p>
+        </li>
+        <li class="tl-step tl-r" style="--row: 9 / span 2; --i: 4">
+          <div class="tl-card">
+            <span class="tl-marker gblock" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 05</span><span class="lane-tag">Define, weeks 4 to 5</span><span class="tl-pill">Team</span></p>
+            <p class="tl-main"><strong class="tl-title">Affinity mapping</strong> <span class="tl-detail">4 themes</span></p>
+          </div>
+        </li>
+        <li class="tl-step tl-r" style="--row: 11 / span 2; --i: 5">
+          <div class="tl-card is-mine">
+            <span class="tl-marker gblock gblock--y" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 06</span><span class="lane-tag">Define, weeks 4 to 5</span><span class="tl-pill tl-pill--mine">Me</span></p>
+            <p class="tl-main"><strong class="tl-title">Journey map</strong> <span class="tl-detail">5 stages</span></p>
+          </div>
+          <p class="tl-note tl-note--left">The map made the brokenness visible.</p>
+        </li>
+        <li class="tl-step tl-r" style="--row: 13 / span 2; --i: 6">
+          <div class="tl-card">
+            <span class="tl-marker gblock" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 07</span><span class="lane-tag">Define, weeks 4 to 5</span><span class="tl-pill">Team</span></p>
+            <p class="tl-main"><strong class="tl-title">Personas</strong></p>
+          </div>
+        </li>
+        <li class="tl-step tl-d" style="--row: 14 / span 2; --i: 7">
+          <div class="tl-card">
+            <span class="tl-marker gblock" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 08</span><span class="lane-tag">Develop, weeks 6 to 9</span><span class="tl-pill">Team</span></p>
+            <p class="tl-main"><strong class="tl-title">IA and user flows</strong> <span class="tl-detail">11 flows</span></p>
+          </div>
+        </li>
+        <li class="tl-step tl-d" style="--row: 16 / span 2; --i: 8">
+          <div class="tl-card">
+            <span class="tl-marker gblock" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 09</span><span class="lane-tag">Develop, weeks 6 to 9</span><span class="tl-pill">Team</span></p>
+            <p class="tl-main"><strong class="tl-title">Sketches to lo-fi to hi-fi</strong></p>
+          </div>
+        </li>
+        <li class="tl-step tl-d" style="--row: 18 / span 2; --i: 9">
+          <div class="tl-card is-mine">
+            <span class="tl-marker gblock gblock--y" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 10</span><span class="lane-tag">Develop, weeks 6 to 9</span><span class="tl-pill tl-pill--mine">Me</span></p>
+            <p class="tl-main"><strong class="tl-title">Mentorship flow</strong></p>
+          </div>
+        </li>
+        <li class="tl-step tl-d" style="--row: 20 / span 2; --i: 10">
+          <div class="tl-card">
+            <span class="tl-marker gblock" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 11</span><span class="lane-tag">Deliver, weeks 10 to 12</span><span class="tl-pill">Team</span></p>
+            <p class="tl-main"><strong class="tl-title">Usability testing</strong> <span class="tl-detail">8 students</span></p>
+          </div>
+        </li>
+        <li class="tl-step tl-d" style="--row: 22 / span 3; --i: 11">
+          <div class="tl-card is-finale">
+            <span class="tl-marker gblock" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 12</span><span class="lane-tag">Deliver, weeks 10 to 12</span><span class="tl-pill">Team</span></p>
+            <p class="tl-main"><strong class="tl-title">Three changes from testing</strong> <span class="tl-detail">Final prototype, stakeholder readout</span></p>
+          </div>
+          <p class="tl-note tl-note--right">Every change traced to a tester.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="container cs-layout">
+    <nav class="phase-nav" aria-label="Case study sections">
+      <button class="phase-toggle" type="button" aria-expanded="false" aria-controls="phase-list">
+        <span><span class="phase-toggle-label">Section: </span><span class="phase-current">00 Problem</span></span>
+        <span class="phase-toggle-caret" aria-hidden="true">&#9662;</span>
+      </button>
+      <ol id="phase-list" class="phase-list" role="list">
+        <li><a href="#problem"><span>00</span> Problem</a></li>
+        <li><a href="#research"><span>01</span> Research</a></li>
+        <li><a href="#synthesis"><span>02</span> Synthesis</a></li>
+        <li><a href="#ideation"><span>03</span> Ideation</a></li>
+        <li><a href="#final-design"><span>04</span> Final design</a></li>
+        <li><a href="#outcomes"><span>05</span> Outcomes</a></li>
+        <li><a href="#reflection"><span>06</span> Reflection</a></li>
+        <li><a href="#long-view"><span>07</span> The long view</a></li>
+      </ol>
+    </nav>
+
+    <div class="cs-content">
+
+      <!-- 00 PROBLEM -->
+      <section id="problem" class="phase" aria-labelledby="problem-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>00</span> Problem</p>
+          <h2 id="problem-h" class="takeaway">The resources exist. Students can't find, sequence, or trust them.</h2>
+        </header>
+
+        <ol class="story-row story-row--4" role="list" aria-label="What students told us">
+          <li class="story-card">
+            <p class="story-num"><strong>6+</strong></p>
+            <p class="story-label">tools students used in a typical week of searching</p>
+          </li>
+          <li class="story-card">
+            <p class="story-num"><strong>8</strong> of 8</p>
+            <div class="fraction-bar" style="--n: 8; --d: 8; --bar: #FF6B5B" role="img" aria-label="8 of 8 students"></div>
+            <p class="story-label">described constantly feeling behind</p>
+          </li>
+          <li class="story-card">
+            <p class="story-num"><strong>Once</strong></p>
+            <p class="story-label">several had used UMSI career resources only at orientation</p>
+          </li>
+          <li class="story-card">
+            <p class="story-num"><strong>2</strong> of 8</p>
+            <div class="fraction-bar" style="--n: 2; --d: 8; --bar: #FF6B5B" role="img" aria-label="2 of 8 students"></div>
+            <p class="story-label">had ever messaged an alum, though all called mentorship critical</p>
+          </li>
+        </ol>
+
+        <div class="hmw">
+          <span class="chip chip--blue">How might we</span>
+          <p>How might we design a single, trustworthy surface that lets a UMSI student see what's available, who can help, and what to do next, without leaving the page?</p>
+        </div>
+
+        <div class="so-what"><span class="so-what-label">So what</span><p>UMSI didn't have a discovery problem. It had a coherence problem, and it hit students with less time and fewer connections hardest.</p></div>
+      </section>
+
+      <!-- 01 RESEARCH -->
+      <section id="research" class="phase" aria-labelledby="research-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>01</span> Research</p>
+          <h2 id="research-h" class="takeaway">We listened to students, staff, and the tools students already use.</h2>
+        </header>
+
+        <ul class="ide-skim ide-skim--2" role="list" aria-label="Research methods">
+          <li class="ide-skim-card ide-skim-card--blue"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">Stakeholder interviews</p><p>Engaged Learning, Career Development, and DEI offices: 3 offices, 5 staff.</p></div></li>
+          <li class="ide-skim-card ide-skim-card--mine"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">Student interviews (I led)</p><p>8 UMSI students across tracks, screened for career stage and visa status, 15 to 20 minutes each over Zoom.</p></div></li>
+          <li class="ide-skim-card ide-skim-card--blue"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">Competitive analysis</p><p>Handshake, CareerLink, LinkedIn, Iris alumni search, and peer-school platforms: 5 scored.</p></div></li>
+          <li class="ide-skim-card ide-skim-card--mine"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">Journey mapping (me)</p><p>Five stages with emotion overlays and pain points.</p></div></li>
+        </ul>
+
+        <div class="so-what"><span class="so-what-label">So what</span><p>Each office's tool worked alone. Together they formed a maze.</p></div>
+      </section>
+
+      <!-- 02 SYNTHESIS -->
+      <section id="synthesis" class="phase" aria-labelledby="synthesis-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>02</span> Synthesis</p>
+          <h2 id="synthesis-h" class="takeaway">Four themes became the team's shared vocabulary.</h2>
+        </header>
+
+        <div class="block">
+            <figure class="figure">
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="https://images.squarespace-cdn.com/content/v1/617a2289aab8dc1fa09d04c4/0128611a-a0f0-4a21-8431-522c9c7b7998/Frame%2B10%2B%284%29.png" loading="lazy" decoding="async" alt="Affinity-mapped interview themes">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <figcaption>Affinity map from 8 student interviews.</figcaption>
+            </figure>
+        </div>
+
+        <ul class="ide-skim ide-skim--2" role="list" aria-label="Four themes">
+          <li class="ide-skim-card ide-skim-card--blue"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">Fragmentation</p><p class="an-q">&ldquo;I find the UMSI resources difficult to navigate.&rdquo;</p></div></li>
+          <li class="ide-skim-card ide-skim-card--blue"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">Mentorship opacity</p><p class="an-q">&ldquo;I try and find alumni with similar career trajectories so I can follow their footsteps.&rdquo;</p></div></li>
+          <li class="ide-skim-card ide-skim-card--blue"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">Visa and identity invisibility</p><p>International students filtered sponsoring employers by hand.</p></div></li>
+          <li class="ide-skim-card ide-skim-card--blue"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">Resource avoidance</p><p class="an-q">&ldquo;Last time I used UMSI career resources was when they first introduced them to us during orientation.&rdquo;</p></div></li>
+        </ul>
+
+        <div class="block">
+          <h3 class="block-title">Personas</h3>
+            <figure class="figure">
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="https://images.squarespace-cdn.com/content/v1/5dd456df47a0a84372865bc5/64f2eff9-ed79-4f46-9ec1-75400820b5e6/Frame+2.png" loading="lazy" decoding="async" alt="Persona spread: Cher Jones, Dave Gallego, and Jane Huang">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+            </figure>
+          <ul class="mini-cards" role="list">
+            <li class="mini-card"><h4>Cher Jones</h4><p>Domestic, UX track</p><p class="mini-shaped">Shaped the centralized dashboard</p></li>
+            <li class="mini-card"><h4>Dave Gallego</h4><p>International, data analysis</p><p class="mini-shaped">Shaped visa-aware filters</p></li>
+            <li class="mini-card"><h4>Jane Huang</h4><p>Alumna mentor</p><p class="mini-shaped">Shaped ongoing mentorship over one-off chats</p></li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h3 class="block-title">Current-state journey map <span class="chip chip--mine">Mine</span></h3>
+          <div class="jmap-wrap" tabindex="0" role="region" aria-label="Journey map, scrolls sideways on small screens">
+            <table class="jmap">
+              <caption class="sr-only">Five-stage journey map with the emotion and the design opportunity at each stage</caption>
+              <thead><tr><td></td><th scope="col">Discover</th><th scope="col">Evaluate</th><th scope="col">Prepare</th><th scope="col">Connect</th><th scope="col">Decide</th></tr></thead>
+              <tbody>
+                <tr class="jm-emotion"><th scope="row">Emotion</th><td>Curious and scattered</td><td>Uncertain</td><td>Anxious</td><td>Hesitant</td><td>Hopeful but tired</td></tr>
+                <tr class="jm-opp"><th scope="row">Opportunity</th><td>One curated feed with sponsorship labels</td><td>Referral pages with alum context</td><td>One events surface with calendar sync</td><td>Mentor requests with ratings and templates</td><td>Saved jobs and mentors that persist</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="so-what"><span class="so-what-label">So what</span><p>Every screen, interaction, and cut had to trace back to one of these four themes.</p></div>
+      </section>
+
+      <!-- 03 IDEATION -->
+      <section id="ideation" class="phase" aria-labelledby="ideation-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>03</span> Ideation</p>
+          <h2 id="ideation-h" class="takeaway">Three principles decided every screen review.</h2>
+        </header>
+
+        <ul class="ide-skim" role="list" aria-label="Design principles">
+          <li class="ide-skim-card ide-skim-card--team"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">Trustworthy by default</p></div></li>
+          <li class="ide-skim-card ide-skim-card--team"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">Lower the activation cost</p><p>Every first action in under three taps and one minute.</p></div></li>
+          <li class="ide-skim-card ide-skim-card--team"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">Respect the search</p><p>Optimize for focused sessions, not engagement metrics or notification load.</p></div></li>
+        </ul>
+
+        <dl class="ide-tradeoff">
+          <div><dt>Decision</dt><dd>Mentorship is a layer across every surface, not a standalone tab.</dd></div>
+          <div><dt>Why</dt><dd>Every student named mentorship as critical, but only 2 of 8 had reached out. The blocker was knowing who to ask and how.</dd></div>
+          <div class="is-tradeoff"><dt>Tradeoff</dt><dd>Mentorship stops being one destination, so it has to show up wherever it's relevant.</dd></div>
+        </dl>
+
+        <div class="block">
+          <h3 class="block-title">Information architecture</h3>
+          <figure class="figure">
+            <div class="fig-grid fig-grid--2">
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="https://images.squarespace-cdn.com/content/v1/617a2289aab8dc1fa09d04c4/904872d0-09f2-475d-afae-aef67f88afcc/Anchor+Final+Project+Report.png" loading="lazy" decoding="async" alt="IA diagram">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="https://images.squarespace-cdn.com/content/v1/617a2289aab8dc1fa09d04c4/98cd38b7-fed2-4c51-8375-f0682f03cd9b/Anchor+Final+Project+Report-2.png" loading="lazy" decoding="async" alt="Key features map">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+            </div>
+            <figcaption>Feed, Events, and Jobs as hubs, with mentorship connecting all three.</figcaption>
+          </figure>
+        </div>
+
+        <div class="block">
+          <h3 class="block-title">User flows</h3>
+            <figure class="figure">
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="images/anchor/user-flows.jpg" width="1600" height="130" loading="lazy" decoding="async" alt="11 user-flow diagrams covering sign-in, feed posting, events RSVP, mentor request, job application, and cancellation paths">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <figcaption>11 end-to-end flows mapped before any pixels, with error prevention on cancellation.</figcaption>
+            </figure>
+        </div>
+
+        <figure class="banner-fig">
+<section class="tea-banner an-evo" aria-label="My Mentorship flow evolving from a hand sketch to a low-fidelity wireframe to a high-fidelity prototype">
+  <div class="an-evo__title" aria-hidden="true">My flow: Mentorship</div>
+  <div class="an-evo__row" aria-hidden="true">
+    <div class="an-evo__step"><span class="an-evo__label"><i>01</i>Sketch</span><div class="an-paper"><img src="images/anchor/sketch-mentor.jpg" alt=""></div></div>
+    <div class="an-evo__arrow"></div>
+    <div class="an-evo__step"><span class="an-evo__label"><i>02</i>Lo-fi</span><div class="win"><div class="win__bar"><i></i><i></i><i></i></div><img src="images/anchor/lofi-mentor.jpg" alt=""></div></div>
+    <div class="an-evo__arrow"></div>
+    <div class="an-evo__step"><span class="an-evo__label"><i>03</i>Hi-fi</span><div class="win"><div class="win__bar"><i></i><i></i><i></i></div><img src="images/anchor/hifi-mentor.jpg" alt=""></div><div class="flag">Filters, real profiles, student ratings</div></div>
+  </div>
+</section>
+          <figcaption class="banner-cap">My Mentorship flow, from sketch to hi-fi. Visual polish waited until the flow held up.</figcaption>
+        </figure>
+      </section>
+
+      <!-- 04 FINAL DESIGN -->
+      <section id="final-design" class="phase" aria-labelledby="final-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>04</span> Final design</p>
+          <h2 id="final-h" class="takeaway">Four surfaces, one platform, every change traced to testing.</h2>
+        </header>
+
+        <figure class="banner-fig">
+<section class="tea-banner tea-wall an-wall" aria-label="Anchor screens from hand sketches to low-fidelity wireframes to high-fidelity prototypes">
+  <div class="tea-wall__grid" aria-hidden="true">
+    <div class="tea-wall__col"><div class="win"><div class="win__bar"><i></i><i></i><i></i></div><img src="images/anchor/hifi-jobs.jpg" alt=""></div><div class="an-paper"><img src="images/anchor/sketch-feed.jpg" alt=""></div><div class="win"><div class="win__bar"><i></i><i></i><i></i></div><img src="images/anchor/lofi-events.jpg" alt=""></div></div>
+    <div class="tea-wall__col"><div class="win"><div class="win__bar"><i></i><i></i><i></i></div><img src="images/anchor/lofi-mentor.jpg" alt=""></div><div class="win"><div class="win__bar"><i></i><i></i><i></i></div><img src="images/anchor/hifi-feed.jpg" alt=""></div><div class="an-paper"><img src="images/anchor/sketch-jobs.jpg" alt=""></div></div>
+    <div class="tea-wall__col"><div class="an-paper"><img src="images/anchor/sketch-mentor.jpg" alt=""></div><div class="an-brand"><div><b><svg class="an-anchor-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="2.2"/><path d="M12 6.7V21"/><path d="M7.5 10.5h9"/><path d="M4 13.5c0 4 3.6 7.5 8 7.5s8-3.5 8-7.5"/></svg>Anchor</b><small>Career platform for UMSI students</small></div></div><div class="win"><div class="win__bar"><i></i><i></i><i></i></div><img src="images/anchor/hifi-events.jpg" alt=""></div></div>
+    <div class="tea-wall__col"><div class="win"><div class="win__bar"><i></i><i></i><i></i></div><img src="images/anchor/hifi-mentor.jpg" alt=""></div><div class="win"><div class="win__bar"><i></i><i></i><i></i></div><img src="images/anchor/lofi-jobs.jpg" alt=""></div><div class="an-paper"><img src="images/anchor/sketch-events.jpg" alt=""></div></div>
+    <div class="tea-wall__col"><div class="win"><div class="win__bar"><i></i><i></i><i></i></div><img src="images/anchor/lofi-feed.jpg" alt=""></div><div class="win"><div class="win__bar"><i></i><i></i><i></i></div><img src="images/anchor/hifi-jobs.jpg" alt=""></div><div class="win"><div class="win__bar"><i></i><i></i><i></i></div><img src="images/anchor/hifi-feed.jpg" alt=""></div></div>
+  </div>
+</section>
+        </figure>
+
+        <div class="block">
+          <h3 class="block-title">Four surfaces</h3>
+          <div class="walks">
+              <article class="walk" id="surface-feed" aria-labelledby="surface-feed-t">
+                <div class="walk-phone clip">
+                  <div class="walk-screen">
+                    <video data-type='video/mp4; codecs="hvc1"' src="images/anchor/feed.mp4" poster="images/anchor/feed-still.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Anchor Feed screen recording"></video>
+                    <button class="clip-toggle" type="button">Pause</button>
+                  </div>
+                </div>
+                <div class="walk-text">
+                  <p class="walk-eyebrow">Feed</p>
+                  <h4 id="surface-feed-t" class="walk-title">A low-pressure career home that doesn't feel like LinkedIn.</h4>
+                  <dl>
+                    <div><dt>Why it works this way</dt><dd>&ldquo;Would a UMSI student feel comfortable posting this?&rdquo; No engagement metrics in students' faces.</dd></div>
+                  </dl>
+                </div>
+              </article>
+
+              <article class="walk" id="surface-events" aria-labelledby="surface-events-t">
+                <div class="walk-phone clip">
+                  <div class="walk-screen">
+                    <video data-type='video/mp4; codecs="hvc1"' src="images/anchor/event.mp4" poster="images/anchor/event-still.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Anchor Events screen recording"></video>
+                    <button class="clip-toggle" type="button">Pause</button>
+                  </div>
+                </div>
+                <div class="walk-text">
+                  <p class="walk-eyebrow">Events</p>
+                  <h4 id="surface-events-t" class="walk-title">One calendar across three offices, with office filters and calendar sync.</h4>
+                  <dl>
+                    <div><dt>Why it works this way</dt><dd>Deadlines slipped through three separate calendars.</dd></div>
+                  </dl>
+                </div>
+              </article>
+
+              <article class="walk" id="surface-jobs" aria-labelledby="surface-jobs-t">
+                <div class="walk-phone clip">
+                  <div class="walk-screen">
+                    <video data-type='video/mp4; codecs="hvc1"' src="images/anchor/job.mp4" poster="images/anchor/job-still.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Anchor Jobs screen recording"></video>
+                    <button class="clip-toggle" type="button">Pause</button>
+                  </div>
+                </div>
+                <div class="walk-text">
+                  <p class="walk-eyebrow">Jobs and referrals</p>
+                  <h4 id="surface-jobs-t" class="walk-title">A sponsorship signal on every card and a &ldquo;what they look for&rdquo; field.</h4>
+                  <dl>
+                    <div><dt>Why it works this way</dt><dd>International students filtered sponsors by hand.</dd></div>
+                  </dl>
+                </div>
+              </article>
+
+              <article class="walk walk--mine" id="surface-mentorship" aria-labelledby="surface-mentorship-t">
+                <div class="walk-phone clip">
+                  <div class="walk-screen">
+                    <video data-type='video/mp4; codecs="hvc1"' src="images/anchor/mentor.mp4" poster="images/anchor/mentor-still.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Anchor Mentor screen recording"></video>
+                    <button class="clip-toggle" type="button">Pause</button>
+                  </div>
+                </div>
+                <div class="walk-text">
+                  <p class="walk-eyebrow">Mentorship, my flow</p>
+                  <h4 id="surface-mentorship-t" class="walk-title">Filter alumni, read student-rated helpfulness, send a request from a starter template, and book directly.</h4>
+                  <dl>
+                    <div><dt>Why it works this way</dt><dd>Only 2 of 8 had ever reached out. The blank cold email was the barrier.</dd></div>
+                  </dl>
+                  <p class="walk-callout">I owned this flow end to end.</p>
+                </div>
+              </article>
+          </div>
+        </div>
+
+        <div class="block">
+          <h3 class="block-title">Three changes from testing</h3>
+          <div class="ide-table-wrap">
+            <table class="ide-table">
+              <caption class="sr-only">Testing findings and the design change each one drove</caption>
+              <thead><tr><th scope="col">What broke</th><th scope="col">Source</th><th scope="col">What it changed</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td class="ide-broke" data-label="What broke"><strong>The Resources tab felt opaque; use dropped after orientation</strong></td>
+                  <td class="ide-src" data-label="Source"><span class="ide-chip">Interviews and testing</span></td>
+                  <td class="ide-fix" data-label="What it changed"><span class="ide-check" aria-hidden="true"></span><span>Replaced with a social feed using familiar patterns, to make the home feel familiar.</span></td>
+                </tr>
+                <tr>
+                  <td class="ide-broke" data-label="What broke"><strong>Long job lists with no way to narrow them</strong></td>
+                  <td class="ide-src" data-label="Source"><span class="ide-chip">Usability testing</span></td>
+                  <td class="ide-fix" data-label="What it changed"><span class="ide-check" aria-hidden="true"></span><span>Prominent search and UMSI-tuned filters, to reduce cognitive load when narrowing roles.</span></td>
+                </tr>
+                <tr>
+                  <td class="ide-broke" data-label="What broke"><em>Referrals were &ldquo;a thing I heard about but couldn't find&rdquo;</em></td>
+                  <td class="ide-src" data-label="Source"><span class="ide-chip">Usability testing</span></td>
+                  <td class="ide-fix" data-label="What it changed"><span class="ide-check" aria-hidden="true"></span><span>Referrals got their own surface with a &ldquo;what they look for&rdquo; field.</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="block">
+          <h3 class="block-title">Key features</h3>
+          <div class="feat-grid">
+            <figure class="figure">
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="https://images.squarespace-cdn.com/content/v1/5dd456df47a0a84372865bc5/32320d30-9ea8-454f-ba33-54c8bea9b773/MentorshipDashboard.gif" loading="lazy" decoding="async" alt="Mentorship Dashboard animated walkthrough">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <figcaption><strong>Mentorship Dashboard.</strong> A formal mentorship program instead of a one-off coffee chat, with each alum's expectations on their profile.</figcaption>
+            </figure>
+            <figure class="figure">
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="https://images.squarespace-cdn.com/content/v1/5dd456df47a0a84372865bc5/f78bfe4d-e95a-4837-981c-dc45315b6f0f/GroupMentoringSession.gif" loading="lazy" decoding="async" alt="Group Mentoring Session animated walkthrough">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <figcaption><strong>Group Mentoring Sessions.</strong> Live sessions, real-time chat, and async boards, because the career search felt isolating.</figcaption>
+            </figure>
+            <figure class="figure">
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="https://images.squarespace-cdn.com/content/v1/5dd456df47a0a84372865bc5/e7e2a45a-573a-4a73-9c0e-820c100ca42c/ApplicationTracker.gif" loading="lazy" decoding="async" alt="Application Tracker animated walkthrough">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <figcaption><strong>Application Tracker.</strong> Deadlines, statuses, and employer feedback in one place instead of separate logins.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="block">
+          <h3 class="block-title">Design system</h3>
+          <div class="fig-grid fig-grid--2">
+            <figure class="figure">
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="https://images.squarespace-cdn.com/content/v1/5dd456df47a0a84372865bc5/57b3aff0-146b-474c-a418-2d428ae3d162/anchorcolorpalette-ezgif.com-webp-to-jpg-converter.jpg" loading="lazy" decoding="async" alt="Anchor color palette">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <figcaption>Color palette.</figcaption>
+            </figure>
+            <figure class="figure">
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="https://images.squarespace-cdn.com/content/v1/5dd456df47a0a84372865bc5/e889de46-d33a-4162-aad6-b3431f2bdc09/anchortypography-ezgif.com-webp-to-jpg-converter.jpg" loading="lazy" decoding="async" alt="Anchor typography system">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <figcaption>Type system.</figcaption>
+            </figure>
+          </div>
+          <p class="walk-callout">Color pairs were checked for contrast and color-blindness.</p>
+        </div>
+      </section>
+
+      <!-- 05 OUTCOMES -->
+      <section id="outcomes" class="phase" aria-labelledby="outcomes-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>05</span> Outcomes</p>
+          <h2 id="outcomes-h" class="takeaway">Students said it felt like the tool they'd always needed.</h2>
+        </header>
+
+        <figure class="pull-quote">
+          <blockquote><p>&ldquo;Anchor feels like the tool I've always needed.&rdquo;</p></blockquote>
+          <figcaption>UMSI student, usability testing</figcaption>
+        </figure>
+
+        <ul class="results an-results" role="list">
+          <li><span class="r-num r-mint">75%</span><span class="r-label">said the mentorship feature improved their networking experience</span></li>
+          <li><span class="r-num r-mint">Most</span><span class="r-label">reported reduced cognitive load navigating their career search</span></li>
+          <li><span class="r-num r-yellow">3</span><span class="r-label">design changes driven directly by testing</span></li>
+        </ul>
+
+        <ul class="testimonials" role="list" aria-label="Testimonials from UMSI students">
+          <li class="testimonial">
+            <blockquote><p>&ldquo;I would use this platform to help me navigate opportunities and career growth for school. I like how everything is consolidated: events, job postings, and networking opportunities into a single platform, [it] addresses the issue of fragmented information sources.&rdquo;</p></blockquote>
+            <p class="testimonial-by">UMSI student</p>
+          </li>
+          <li class="testimonial">
+            <blockquote><p>&ldquo;I like how there are ways to make connections between current students and alumni that can enhance mentorship opportunities and provide valuable career insights.&rdquo;</p></blockquote>
+            <p class="testimonial-by">UMSI student</p>
+          </li>
+        </ul>
+
+        <div class="block proto">
+          <h3 class="block-title">Try the prototype</h3>
+          <div class="app-window proto-window">
+            <div class="app-bar" aria-hidden="true"><span class="app-dots"><i></i><i></i><i></i></span><span class="app-title">Anchor prototype</span></div>
+            <iframe loading="lazy" src="https://embed.figma.com/proto/rrzGNB4XcRH8wrXcYi8dU1/SI-582-Project---Anchor?node-id=1492-4067&amp;p=f&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=1492%3A3992&amp;starting-point-node-id=1492%3A4067&amp;embed-host=share" title="Anchor Figma prototype" allowfullscreen></iframe>
+          </div>
+          <a class="proto-btn" href="https://www.figma.com/proto/rrzGNB4XcRH8wrXcYi8dU1/SI-582-Project---Anchor?node-id=1492-4067&amp;p=f&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=1492%3A3992&amp;starting-point-node-id=1492%3A4067" target="_blank" rel="noopener">Test the prototype <span aria-hidden="true">&nearr;</span><span class="sr-only"> (opens Figma in a new tab)</span></a>
+        </div>
+      </section>
+
+      <!-- 06 REFLECTION -->
+      <section id="reflection" class="phase" aria-labelledby="reflection-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>06</span> Reflection</p>
+          <h2 id="reflection-h" class="takeaway">The real deliverable was a shared map of why it felt broken.</h2>
+        </header>
+
+        <ol class="learnings" role="list">
+          <li><span class="learn-n" aria-hidden="true">1</span><h3>Centralization is a trust problem.</h3><p>It's service design about ownership and the tools you're competing with, not a feature.</p></li>
+          <li><span class="learn-n" aria-hidden="true">2</span><h3>Listen for their language.</h3><p>Students described cognitive load before I ever used the term.</p></li>
+          <li><span class="learn-n" aria-hidden="true">3</span><h3>Templates beat policies.</h3><p>Mentorship works when it's easy to start, not when it's heavily structured.</p></li>
+        </ol>
+
+        <p class="an-nexttime">Next time, I'd build the journey map and principles with stakeholders, not for them.</p>
+
+        <div class="block">
+          <h3 class="block-title">Where I've applied it since</h3>
+          <ul class="applied" role="list">
+            <li class="applied-card">
+              <p class="applied-eyebrow">Lesson: listen for their language</p>
+              <h4 class="applied-title">I led TEA's affinity map</h4>
+              <p class="applied-body">Grouping participants' own words turned five contextual inquiry sessions into 17 requirements.</p>
+            </li>
+            <li class="applied-card">
+              <p class="applied-eyebrow">Lesson: lower the activation cost</p>
+              <h4 class="applied-title">I removed the blank prompt in TEA</h4>
+              <p class="applied-body">Like Anchor's mentor templates removed the blank cold email, TEA's highlight-to-transform let users act without writing a prompt.</p>
+            </li>
+            <li class="applied-card applied-card--next">
+              <div class="applied-head"><p class="applied-eyebrow">Lesson: templates beat policies</p><span class="chip chip--blue">Next</span></div>
+              <h4 class="applied-title">Next: first connections that feel safe</h4>
+              <p class="applied-body">A player's first message or first group join should take a few taps, with guidance that makes reaching out feel easy and safe.</p>
+            </li>
+          </ul>
+          <a class="applied-bridge" href="go-live.html">After Anchor, I knew the map comes before the screens. <span aria-hidden="true">&rarr;</span><span class="sr-only"> Next case study</span></a>
+        </div>
+      </section>
+
+      <!-- 07 THE LONG VIEW -->
+      <section id="long-view" class="phase" aria-labelledby="long-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>07</span> The long view</p>
+          <h2 id="long-h" class="takeaway">From one school to every Michigan student.</h2>
+        </header>
+
+        <ol class="lv-cards" role="list">
+          <li class="lv-card"><span class="lv-n" aria-hidden="true">01</span><p>Pilot Feed and Mentorship with one cohort for a semester.</p></li>
+          <li class="lv-card"><span class="lv-n" aria-hidden="true">02</span><p>Add international guidance: visa timelines, OPT-aware filters, policy alerts.</p></li>
+          <li class="lv-card"><span class="lv-n" aria-hidden="true">03</span><p>Interview hiring managers on the referral side.</p></li>
+          <li class="lv-card"><span class="lv-n" aria-hidden="true">04</span><p>Federate across Michigan schools without losing curation.</p></li>
+          <li class="lv-card"><span class="lv-n" aria-hidden="true">05</span><p>A quiet &ldquo;next action&rdquo; layer based on journey stage, not engagement metrics.</p></li>
+        </ol>
+      </section>
+
+      <nav class="case-next" aria-label="More work">
+        <a class="next-link" href="go-live.html">
+          <span class="eyebrow">Next case</span>
+          <span class="next-title">Waypoint: context that travels with the work &rarr;</span>
+        </a>
+        <a class="site-home" href="index.html#work">&larr; Back to all work</a>
+      </nav>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Sabrina May</p>
+    <ul class="footer-links" role="list">
+      <li><a href="resume/Sabrina_May_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
+      <li><a href="https://www.linkedin.com/in/sabrinasmay" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:maysab@umich.edu">Email</a></li>
+    </ul>
+  </div>
+</footer>
+
+<dialog id="lightbox" class="lightbox" aria-label="Enlarged image">
+  <div class="lightbox-bar"><button class="lightbox-close" type="button">Close (Esc)</button></div>
+  <div class="lightbox-stage"><img alt=""></div>
+  <p class="lightbox-caption"></p>
+</dialog>
+</body>
+</html>

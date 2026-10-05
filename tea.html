@@ -1,0 +1,1052 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="js/gate.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TEA: Trusting AI across languages | Sabrina May</title>
+<meta name="description" content="Case study: TEA lets multilingual researchers think and prompt AI in their own language, then refine and verify what comes back.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=IBM+Plex+Mono:wght@500;600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body class="page-case">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-bar site-bar--case">
+  <div class="container site-bar-inner">
+    <a class="site-home" href="index.html">&larr; All work</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html#why-roblox">Why Roblox</a>
+      <a class="nav-cta" href="resume/Sabrina_May_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- Hero -->
+  <section class="tea-hero" aria-labelledby="tea-hero-title">
+    <div class="container tea-hero-grid">
+      <div class="tea-hero-text">
+        <p class="eyebrow">Case study 01</p>
+        <h1 id="tea-hero-title" class="tea-hero-title">TEA: helping multilingual researchers <span class="gold">trust</span> English-first AI</h1>
+        <p class="tea-hero-sub">Sabrina May, UX lead, University of Michigan</p>
+        <dl class="tea-hero-facts">
+          <div><dt>Ambiguous goal</dt><dd>How do multilingual researchers struggle with AI chat tools?</dd></div>
+          <div><dt>Impact</dt><dd>26% faster translation, 22% less workload on tone tasks</dd></div>
+        </dl>
+      </div>
+      <div class="globe-wrap">
+        <img src="images/tea/globe-base.png" width="1800" height="1800" decoding="async" alt="">
+        <canvas id="tea-globe" aria-label="Gold arcs connecting the languages study participants spoke"></canvas>
+        <img src="images/tea/globe-languages.png" width="1800" height="1800" decoding="async" alt="Globe centered on Europe and Asia marking the 14 languages study participants spoke in gold and 4 other languages in coral" style="left: -17px; top: 5px; position: absolute">
+        <p class="globe-note" style="top: 548px; position: absolute"><span class="globe-note-dot" aria-hidden="true"></span>languages spoken by participants in our case study.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TL;DR on a sky stage -->
+  <header class="sky-stage" aria-labelledby="cs-title">
+    <div class="container">
+      <p class="eyebrow tl-eyebrow">Case study 01</p>
+      <h2 id="cs-title" class="cs-title">TEA: Text Entry Augmentation</h2>
+      <p class="cs-summary">TEA lets multilingual researchers think and prompt AI in their own language, then refine and verify what comes back.</p>
+      <ul class="meta-pills" role="list" style="padding-top: 20px; padding-bottom: 20px">
+        <li class="pill"><span class="pill-label">Project</span><span class="pill-value">Graduate HCI, U-M</span></li>
+        <li class="pill"><span class="pill-label">Timeline</span><span class="pill-value">Fall 2025</span></li>
+        <li class="pill"><span class="pill-label">Users</span><span class="pill-value">Multilingual researchers</span></li>
+        <li class="pill"><span class="pill-label">Team</span><span class="pill-value">Me + CSE ML teammates</span></li>
+        <li class="pill"><span class="pill-label">Tools</span><span class="pill-value">Figma, paper prototypes, Wizard of Oz</span></li>
+      </ul>
+      <figure class="figure app-fig" id="v2-hero">
+<section class="tea-banner tea-hero-mock" aria-label="Rosetta v2, designed solo in Figma: the paper, the conversation, and a verify panel in one workspace, with inline translation and version history">
+  <div class="hm-back" aria-hidden="true">
+    <span class="tag">Every version kept</span>
+    <div class="win"><div class="win__bar"><i></i><i></i><i></i></div>
+      <picture><source media="(prefers-reduced-motion: reduce)" srcset="images/tea/banner-clip-b6-still.jpg"><img src="images/tea/banner-clip-b6.webp" alt=""></picture></div>
+  </div>
+  <div class="hm-main" aria-hidden="true">
+    <div class="win"><div class="win__bar"><i></i><i></i><i></i><span>Rosetta v2</span></div>
+      <div class="shot">
+        <img src="images/tea/v2-workspace-app.png" alt="">
+        <div class="pin pin--left" style="left: 74%; top: 4%;"><b>1</b><span>Prompt in Burmese, read in English</span></div>
+        <div class="pin" style="left: 39%; top: 41%;"><b>2</b><span>Every claim points to its passage</span></div>
+        <div class="pin pin--left pin--hide-sm" style="left: 79%; top: 21%;"><b>3</b><span>Verify only when you need it</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="hm-front" aria-hidden="true">
+    <span class="tag">Translate, then check in place</span>
+    <div class="win"><div class="win__bar"><i></i><i></i><i></i></div>
+      <picture><source media="(prefers-reduced-motion: reduce)" srcset="images/tea/banner-clip-a4-still.jpg"><img src="images/tea/banner-clip-a4.webp" alt=""></picture></div>
+  </div>
+</section>
+        <figcaption>Rosetta v2, designed solo in Figma. One workspace for reading, asking, and checking.</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <section class="results-band" aria-label="Results">
+    <div class="container">
+      <ul class="results" role="list">
+        <li><span class="r-num r-mint">26%</span><span class="r-label">faster on translation tasks</span><span class="r-meta">p = .025</span></li>
+        <li><span class="r-num r-mint">22%</span><span class="r-label">lower cognitive load on tone tasks (NASA-TLX)</span><span class="r-meta">p = .037</span></li>
+        <li><span class="r-num r-yellow">Won</span><span class="r-label">U-M ITS pitch built on TEA's trust insight; onboarded to support UMGPT</span><span class="r-meta">details under NDA</span></li>
+      </ul>
+      <p class="r-foot">Within-subjects study, n = 14.</p>
+    </div>
+  </section>
+
+  <section class="roles-section" aria-label="Roles">
+    <div class="container">
+      <div class="role-split">
+        <section class="role role--me" aria-labelledby="role-me">
+          <h2 id="role-me" class="role-title"><span class="block-icon" aria-hidden="true"></span>What I did</h2>
+          <ul>
+            <li>Led the research questions and the affinity map that produced 17 UX requirements</li>
+            <li>Made my own concept sketches, persona, and storyboard</li>
+            <li>Consolidated five paper prototypes into one</li>
+            <li>Ran one of five heuristic evaluations</li>
+            <li>Designed v2 solo</li>
+          </ul>
+        </section>
+        <section class="role role--team" aria-labelledby="role-team">
+          <h2 id="role-team" class="role-title"><span class="block-icon block-icon--gray" aria-hidden="true"></span>What the team did</h2>
+          <ul>
+            <li>ML teammates built Rosetta v1 (React, Gemini 2.5 Flash) from the prototype I consolidated</li>
+            <li>Survey, contextual inquiry, and the NASA-TLX study were team efforts</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process timeline -->
+  <section class="process" aria-labelledby="process-label">
+    <div class="tl2-floor" aria-hidden="true"><div class="tl2-plane"></div></div>
+    <div class="container">
+      <div class="tl2-head">
+        <div>
+          <p class="eyebrow">Process at a glance</p>
+          <h2 id="process-label" class="tl2-title">Research led, design followed, and v2 was mine.</h2>
+        </div>
+        <ul class="tl2-legend" role="list">
+          <li><span class="gblock gblock--y" aria-hidden="true"></span>Mine</li>
+          <li><span class="gblock" aria-hidden="true"></span>Shared or team</li>
+        </ul>
+      </div>
+      <div class="tl2-lanes" aria-hidden="true"><span class="lane-h lane-h--r">UX Research</span><span class="lane-h lane-h--d">UX Design</span></div>
+      <ol class="tl2" role="list">
+        <li class="tl-step tl-r" style="--row: 1 / span 2; --i: 0">
+          <div class="tl-card">
+            <span class="tl-marker gblock" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 01</span><span class="lane-tag">Research</span><span class="tl-pill">Team</span></p>
+            <p class="tl-main"><strong class="tl-title">Survey</strong> <span class="tl-detail">24 respondents</span></p>
+          </div>
+        </li>
+        <li class="tl-step tl-r" style="--row: 3 / span 2; --i: 1">
+          <div class="tl-card">
+            <span class="tl-marker gblock" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 02</span><span class="lane-tag">Research</span><span class="tl-pill">Team</span></p>
+            <p class="tl-main"><strong class="tl-title">Contextual inquiry</strong> <span class="tl-detail">5 participants</span></p>
+          </div>
+        </li>
+        <li class="tl-step tl-r" style="--row: 5 / span 2; --i: 2">
+          <div class="tl-card is-mine">
+            <span class="tl-marker gblock gblock--y" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 03</span><span class="lane-tag">Research</span><span class="tl-pill tl-pill--mine">Led</span></p>
+            <p class="tl-main"><strong class="tl-title">UX requirements</strong> <span class="tl-detail">17, from my affinity map</span></p>
+          </div>
+          <p class="tl-note tl-note--left">My affinity map became the requirements.</p>
+        </li>
+        <li class="tl-step tl-d" style="--row: 6 / span 2; --i: 3">
+          <div class="tl-card is-mine">
+            <span class="tl-marker gblock gblock--y" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 04</span><span class="lane-tag">Design</span><span class="tl-pill tl-pill--mine">Me</span></p>
+            <p class="tl-main"><strong class="tl-title">Lo-fi sketches</strong> <span class="tl-detail">Source-linked concept</span></p>
+          </div>
+        </li>
+        <li class="tl-step tl-d" style="--row: 8 / span 2; --i: 4">
+          <div class="tl-card is-mine">
+            <span class="tl-marker gblock gblock--y" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 05</span><span class="lane-tag">Design</span><span class="tl-pill tl-pill--mine">Me</span></p>
+            <p class="tl-main"><strong class="tl-title">Persona</strong> <span class="tl-detail">Donna</span></p>
+          </div>
+        </li>
+        <li class="tl-step tl-d" style="--row: 10 / span 2; --i: 5">
+          <div class="tl-card is-mine">
+            <span class="tl-marker gblock gblock--y" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 06</span><span class="lane-tag">Design</span><span class="tl-pill tl-pill--mine">Me</span></p>
+            <p class="tl-main"><strong class="tl-title">Storyboards</strong> <span class="tl-detail">10 frames</span></p>
+          </div>
+        </li>
+        <li class="tl-step tl-d" style="--row: 12 / span 2; --i: 6">
+          <div class="tl-card is-mine">
+            <span class="tl-marker gblock gblock--y" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 07</span><span class="lane-tag">Design</span><span class="tl-pill tl-pill--mine">Final: me</span></p>
+            <p class="tl-main"><strong class="tl-title">Paper prototype</strong> <span class="tl-detail">Wizard of Oz: shared</span></p>
+          </div>
+          <p class="tl-note tl-note--right">I consolidated everyone's prototypes into one.</p>
+        </li>
+        <li class="tl-step tl-r" style="--row: 13 / span 2; --i: 7">
+          <div class="tl-card">
+            <span class="tl-marker gblock" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 08</span><span class="lane-tag">Research</span><span class="tl-pill tl-pill--partial">Ran 1 of 5</span></p>
+            <p class="tl-main"><strong class="tl-title">Heuristic evaluation</strong> <span class="tl-detail">5 experts, 21 issues</span></p>
+          </div>
+        </li>
+        <li class="tl-step tl-d" style="--row: 14 / span 2; --i: 8">
+          <div class="tl-card">
+            <span class="tl-marker gblock" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 09</span><span class="lane-tag">Design</span><span class="tl-pill">ML teammates</span></p>
+            <p class="tl-main"><strong class="tl-title">Rosetta v1</strong> <span class="tl-detail">Built on Gemini</span></p>
+          </div>
+        </li>
+        <li class="tl-step tl-r" style="--row: 15 / span 2; --i: 9">
+          <div class="tl-card">
+            <span class="tl-marker gblock" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 10</span><span class="lane-tag">Research</span><span class="tl-pill">Team</span></p>
+            <p class="tl-main"><strong class="tl-title">NASA-TLX study</strong> <span class="tl-detail">14 participants</span></p>
+          </div>
+        </li>
+        <li class="tl-step tl-d" style="--row: 16 / span 3; --i: 10">
+          <div class="tl-card is-mine is-finale">
+            <span class="tl-marker gblock gblock--y" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 11</span><span class="lane-tag">Design</span><span class="tl-pill tl-pill--mine">Me, solo</span></p>
+            <p class="tl-main"><strong class="tl-title">Rosetta v2</strong> <span class="tl-detail">Figma wireframes</span></p>
+          </div>
+          <p class="tl-note tl-note--right tl-note--top">The study exposed a verification gap, so I took v2 on myself.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="container cs-layout">
+    <nav class="phase-nav" aria-label="Case study sections">
+      <button class="phase-toggle" type="button" aria-expanded="false" aria-controls="phase-list">
+        <span><span class="phase-toggle-label">Section: </span><span class="phase-current">00 Problem</span></span>
+        <span class="phase-toggle-caret" aria-hidden="true">&#9662;</span>
+      </button>
+      <ol id="phase-list" class="phase-list" role="list">
+        <li><a href="#problem"><span>00</span> Problem</a></li>
+        <li><a href="#research"><span>01</span> Research</a></li>
+        <li><a href="#synthesis"><span>02</span> Synthesis</a></li>
+        <li><a href="#ideation"><span>03</span> Ideation</a></li>
+        <li><a href="#final-design"><span>04</span> Final design</a></li>
+        <li><a href="#outcomes"><span>05</span> Outcomes</a></li>
+        <li><a href="#reflection"><span>06</span> Reflection</a></li>
+        <li><a href="#long-view"><span>07</span> The long view</a></li>
+      </ol>
+    </nav>
+
+    <div class="cs-content">
+
+      <!-- 00 PROBLEM -->
+      <section id="problem" class="phase" aria-labelledby="problem-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>00</span> Problem</p>
+          <h2 id="problem-h" class="takeaway"><span class="hl">They think in their language, but they only trust AI in English.</span></h2>
+          <p class="problem-context">We surveyed 24 multilingual researchers. Between them, participants spoke 14 languages.</p>
+        </header>
+
+        <ol class="story-row" role="list" aria-label="What the survey found">
+          <li class="story-card">
+            <p class="story-beat">They avoid their language</p>
+            <p class="story-num"><strong>11</strong> of 21</p>
+            <div class="fraction-bar" style="--n: 11; --d: 21; --bar: #FF6B5B" role="img" aria-label="11 of 21 respondents"></div>
+            <p class="story-label">rarely or never prompt AI in their native language</p>
+          </li>
+          <li class="story-card">
+            <p class="story-beat">It fails them</p>
+            <p class="story-num"><strong>11</strong> of 24</p>
+            <div class="fraction-bar" style="--n: 11; --d: 24; --bar: #FF6B5B" role="img" aria-label="11 of 24 respondents"></div>
+            <p class="story-label">get worse answers in their native language</p>
+            <span class="chip chip--coral story-chip">Top challenge</span>
+          </li>
+          <li class="story-card">
+            <p class="story-beat">They want help in the tool</p>
+            <p class="story-num"><strong>12</strong> of 24</p>
+            <div class="fraction-bar" style="--n: 12; --d: 24; --bar: #2F6BFF" role="img" aria-label="12 of 24 respondents"></div>
+            <p class="story-label">want better multilingual support inside the interface</p>
+            <span class="chip chip--blue story-chip">Top request</span>
+          </li>
+        </ol>
+
+        <div class="problem-grid">
+          <div class="block">
+            <h3 class="block-title">Research questions I led</h3>
+            <ol class="rq-list" role="list">
+              <li><span class="chip chip--blue">RQ1</span><span>How does language background shape the way researchers prompt AI?</span></li>
+              <li><span class="chip chip--blue">RQ2</span><span>Which research tasks do they hand off to AI?</span></li>
+              <li><span class="chip chip--blue">RQ3</span><span>Where does communication break down, and how do they work around it?</span></li>
+            </ol>
+          </div>
+          <div class="lang-card">
+            <h3 class="block-title">14 languages participants spoke</h3>
+            <ul class="lang-chips" role="list">
+              <li>English</li>
+              <li>Mandarin</li>
+              <li>Cantonese</li>
+              <li>Korean</li>
+              <li>Hindi</li>
+              <li>Urdu</li>
+              <li>Punjabi</li>
+              <li>Burmese</li>
+              <li>Macedonian</li>
+              <li>Serbian</li>
+              <li>Croatian</li>
+              <li>Hungarian</li>
+              <li>Persian</li>
+              <li>Italian</li>
+            </ul>
+            <p class="lang-note">Many mixed two or more languages while working.</p>
+          </div>
+        </div>
+
+        <div class="so-what"><span class="so-what-label">So what</span><p>The design target became confidence in AI output in any language, plus help fixing prompts in place.</p></div>
+      </section>
+
+      <!-- 01 RESEARCH -->
+      <section id="research" class="phase" aria-labelledby="research-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>01</span> Research</p>
+          <h2 id="research-h" class="takeaway"><span class="hl">Every breakdown was about meaning, not mechanics.</span></h2>
+        </header>
+
+        <div class="prose">
+          <p>Contextual inquiry: 5 sessions in participants' own workspaces. Most ran 45 to 50 minutes; one ran about two hours.</p>
+        </div>
+
+        <div class="block">
+          <h3 class="block-title">One participant's real workflow broke across four apps</h3>
+          <ol class="hop" role="list">
+            <li><span class="hop-n">01</span><span class="hop-app">Gmail</span><span class="hop-do">Mentor emails an arXiv link</span><span class="hop-pain">Language barriers cause stress</span></li>
+            <li><span class="hop-n">02</span><span class="hop-app">arXiv</span><span class="hop-do">Downloads the PDF</span></li>
+            <li><span class="hop-n">03</span><span class="hop-app">Preview</span><span class="hop-do">Reads the abstract</span><span class="hop-pain">Doesn't understand some terms</span></li>
+            <li><span class="hop-n">04</span><span class="hop-app">ChatGPT</span><span class="hop-do">Uploads the PDF, asks for an overview</span><span class="hop-pain">Confused by hallucinations</span></li>
+            <li><span class="hop-n">05</span><span class="hop-app">ChatGPT</span><span class="hop-do">Asks about terms, reads in Chinese</span><span class="hop-pain">Friction switching languages</span></li>
+          </ol>
+        </div>
+
+        <div class="block">
+          <h3 class="block-title">What we observed</h3>
+          <ul class="notes" role="list">
+            <li class="note"><h4>Language mixing is deliberate.</h4><p>P1 drafts in Chinese, then puts key terms in English. P3 thinks in Hindi and English but types only English, because switching scripts is slow and he trusts English output more.</p></li>
+            <li class="note"><h4>The AI invents terms.</h4><p>Worst in low-resource languages.</p></li>
+            <li class="note"><h4>Dialects get mixed up.</h4><p>P4 asked for Macedonian and got Bulgarian or Serbian.</p></li>
+            <li class="note"><h4>Tone comes back wrong.</h4><p>P2's Korean summaries read as stiff and artificial.</p></li>
+          </ul>
+        </div>
+
+        <figure class="fig-group">
+          <div class="fig-grid fig-grid--2">
+            <figure class="figure">
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="images/tea/flow-model.png" width="980" height="420" loading="lazy" decoding="async"
+                    alt="Flow model: a mentor sends an arXiv link through Gmail; the participant opens arXiv, downloads the PDF, reads it in Preview, and uploads it to ChatGPT. Lightning marks flag breakdowns at copying text, pasting prompts, and generated responses.">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <figcaption><strong>Flow model.</strong> Where the paper and the prompts travel between apps.</figcaption>
+            </figure>
+            <figure class="figure">
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="images/tea/sequence-model.png" width="959" height="825" loading="lazy" decoding="async"
+                    alt="Sequence model titled Reads a paper: steps from opening Gmail to prompting ChatGPT for terminology, with intents in orange and breakdowns marked: language barriers cause stress, not understanding some terminology, confused by terminology drift, and friction from switching languages.">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <figcaption><strong>Sequence model.</strong> Reading a paper, step by step, with intents and breakdowns.</figcaption>
+            </figure>
+          </div>
+          <figcaption>Team-built from the affinity diagram I led.</figcaption>
+        </figure>
+      </section>
+
+      <!-- 02 SYNTHESIS -->
+      <section id="synthesis" class="phase" aria-labelledby="synthesis-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>02</span> Synthesis</p>
+          <h2 id="synthesis-h" class="takeaway"><span class="hl">Five sessions became 17 requirements; six of them define trust.</span></h2>
+        </header>
+
+        <div class="block">
+          <p class="prose">My affinity map produced 17 UX requirements. These six shape v2.</p>
+          <div class="req-groups">
+            <section class="req-group" aria-labelledby="rg-1">
+              <h3 id="rg-1" class="mono-label">Accurate information</h3>
+              <p class="req"><span class="code code--fill">R1</span><span>Answers are factually accurate</span></p>
+              <p class="req"><span class="code code--fill">R6</span><span>Know if an answer is backed by evidence</span></p>
+            </section>
+            <section class="req-group" aria-labelledby="rg-2">
+              <h3 id="rg-2" class="mono-label">Verification</h3>
+              <p class="req"><span class="code code--fill">R2</span><span>Built-in checking inside the workflow</span></p>
+              <p class="req"><span class="code code--fill">R17</span><span>Spot and fix hallucinated or mistranslated content</span></p>
+            </section>
+            <section class="req-group" aria-labelledby="rg-3">
+              <h3 id="rg-3" class="mono-label">Multilingual inclusivity</h3>
+              <p class="req"><span class="code code--fill">R3</span><span>Same meaning in any language</span></p>
+              <p class="req"><span class="code code--fill">R4</span><span>Same formality and accuracy across languages</span></p>
+            </section>
+          </div>
+          <p class="req-note">For contrast, v1 was only built for speed: <span class="code">R11</span> <span class="code">R12</span></p>
+        </div>
+
+        <div class="block">
+          <h3 class="block-title">Storyboard: Donna's day, in 10 frames I drew</h3>
+          <figure class="figure">
+            <div class="frame">
+              <button class="zoom" type="button" data-zoom>
+                <img src="images/tea/storyboard.png" width="2400" height="1065" loading="lazy" decoding="async"
+                  alt="Ten-frame storyboard of Donna's day, from her morning commute and frustrating Burmese prompts to reviewing her reading side by side with her prompt and walking into her advisor meeting prepared.">
+                <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+              </button>
+            </div>
+            <figcaption>Select the storyboard to read each frame.</figcaption>
+          </figure>
+          <div class="story-beats">
+            <div><p class="mono-label">The struggle</p><p>She prompts GPT in Burmese, it hallucinates key concepts, and she re-prompts and gets frustrated.</p></div>
+            <div><p class="mono-label">The concept</p><p>Her reading is analyzed side by side with her prompt, key concepts highlighted. She confirms the answer addresses what she asked and walks into her meeting prepared.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 IDEATION -->
+      <section id="ideation" class="phase" aria-labelledby="ideation-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>03</span> Ideation</p>
+          <h2 id="ideation-h" class="takeaway">I designed for verification. The team shipped speed first.</h2>
+        </header>
+
+        <ul class="ide-skim" role="list">
+          <li class="ide-skim-card ide-skim-card--mine"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">My concept: verify against the source</p><p>Answers anchored to the paper, with in-place correction.</p></div></li>
+          <li class="ide-skim-card ide-skim-card--mine"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">I merged 5 concepts into 1 prototype</p><p>Engineers got one buildable design instead of five.</p></div></li>
+          <li class="ide-skim-card ide-skim-card--fail"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">Testing found 4 failures</p><p>Every one changed the design in v1 or v2.</p></div></li>
+        </ul>
+
+        <div class="block">
+          <h3 class="block-title">My concept: verify against the source</h3>
+          <div class="ide-concept">
+            <div class="fig-grid fig-grid--2 ide-concept-figs">
+            <figure class="figure">
+              <figcaption>Source-anchored answers: the AI points to key concepts in the PDF.</figcaption>
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="images/tea/lofi-concept.png" width="1920" height="1080" loading="lazy" decoding="async"
+                    alt="Lo-fi concept on a laptop mockup: the AI refers to key concepts directly in the PDF, with the matching passage highlighted.">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+            </figure>
+            <figure class="figure">
+              <figcaption>In-place correction: tell the model what you meant without starting over.</figcaption>
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="images/tea/lofi-concept-correction.png" width="1920" height="1080" loading="lazy" decoding="async"
+                    alt="Lo-fi concept: sketches of a researcher reviewing highlighted passages, and a rough UI with a prompt panel reading That's not what I meant, for correcting meaning in place.">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+            </figure>
+            </div>
+            <figure class="ide-quote">
+              <blockquote><p>&ldquo;I like the source reference bit, especially how it shows the translation alongside the corresponding English source.&rdquo;</p></blockquote>
+              <figcaption>Critique feedback on my concept</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="block">
+          <h3 class="block-title">I merged five concepts into one prototype</h3>
+          <div class="ide-flow" role="img" aria-label="Five concepts go through I like, I wish, What if critique and become one paper prototype.">
+            <div class="ide-flow-step"><span class="ide-flow-five"><i></i><i></i><i></i><i></i><i></i></span><span class="ide-flow-label">5 concepts</span></div>
+            <span class="ide-flow-arrow" aria-hidden="true">&rarr;</span>
+            <span class="ide-flow-chip">I like / I wish / What if critique</span>
+            <span class="ide-flow-arrow" aria-hidden="true">&rarr;</span>
+            <div class="ide-flow-step"><span class="gblock gblock--lg"></span><span class="ide-flow-label">1 paper prototype</span></div>
+          </div>
+          <p class="prose">Consolidating unblocked the build: engineers got one prototype instead of five.</p>
+          <div class="fig-grid fig-grid--2">
+            <figure class="figure">
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="images/tea/final-sketch.png" width="1456" height="840" loading="lazy" decoding="async"
+                    alt="Consolidated sketch sequence on laptop screens: start speaking, review the transcript, translation, and generated prompt, then adjust the response with tone match, complexity, length, and translate controls.">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <figcaption>Consolidated sketch: speak a prompt, review it, then refine the response.</figcaption>
+            </figure>
+            <figure class="figure">
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="images/tea/paper-prototype.png" width="1428" height="840" loading="lazy" decoding="async"
+                    alt="Full paper prototype flow connected by red arrows: voice or text input, a three-column transcript review, an ambiguity warning, and a response with tone match, complexity, length, and translate controls.">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <figcaption>The paper prototype engineers built v1 from.</figcaption>
+            </figure>
+          </div>
+          <dl class="ide-tradeoff">
+            <div><dt>Decision</dt><dd>The team prioritized fixing problems before the prompt (voice) and after the response (highlight to refine).</dd></div>
+            <div><dt>Why</dt><dd>Speed. Nobody should have to re-prompt.</dd></div>
+            <div class="is-tradeoff"><dt>Tradeoff</dt><dd>My source-anchored verification concept was set aside. It comes back in <a href="#final-design">v2</a>.</dd></div>
+          </dl>
+        </div>
+
+        <div class="block">
+          <h3 class="block-title">Testing found four failures. Each one changed the design.</h3>
+          <p class="ide-statline">Wizard of Oz sessions plus a heuristic evaluation: 5 experts, 21 issues, average severity 1.8, 2 critical. Severity rated 0 to 4.</p>
+          <figure class="figure ide-woz">
+            <div class="frame">
+              <button class="zoom" type="button" data-zoom>
+                <img src="images/tea/wizard-of-oz.jpg" width="832" height="642" loading="lazy" decoding="async"
+                    alt="Photo of paper prototype pieces used in Wizard of Oz testing, including the Ambiguity Detected, Review Red Text card and the toolbar with tone match, complexity and length sliders, and translate.">
+                <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+              </button>
+            </div>
+            <figcaption>Wizard of Oz pieces. The red &lsquo;Ambiguity detected&rsquo; card, top right, became v2's inline assumptions.</figcaption>
+          </figure>
+          <div class="ide-table-wrap">
+            <table class="ide-table">
+              <caption class="sr-only">Testing failures and the design change each one drove</caption>
+              <thead><tr><th scope="col">What broke</th><th scope="col">Source</th><th scope="col">What it changed</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td class="ide-broke" data-label="What broke"><strong>No way to undo an AI change</strong><span class="ide-note">All five experts flagged it; two rated it critical.</span></td>
+                  <td class="ide-src" data-label="Source"><span class="ide-chip">Heuristic evaluation</span></td>
+                  <td class="ide-fix" data-label="What it changed"><span class="ide-check" aria-hidden="true"></span><span>v1: side-by-side comparison. v2: version history with compare and restore.</span></td>
+                </tr>
+                <tr>
+                  <td class="ide-broke" data-label="What broke"><em>&ldquo;Tone match, length, translate... what???&rdquo;</em></td>
+                  <td class="ide-src" data-label="Source"><span class="ide-chip">Usability test</span></td>
+                  <td class="ide-fix" data-label="What it changed"><span class="ide-check" aria-hidden="true"></span><span>v1: one-click actions. v2: plain verbs, each with a one-line tooltip.</span></td>
+                </tr>
+                <tr>
+                  <td class="ide-broke" data-label="What broke"><em>&ldquo;I thought the highlight icon was just for marking text&rdquo;</em></td>
+                  <td class="ide-src" data-label="Source"><span class="ide-chip">Usability test</span></td>
+                  <td class="ide-fix" data-label="What it changed"><span class="ide-check" aria-hidden="true"></span><span>v1: hints on the first message and chat bar.</span></td>
+                </tr>
+                <tr>
+                  <td class="ide-broke" data-label="What broke"><strong>The red &ldquo;Ambiguity detected&rdquo; card meant nothing to testers</strong><span class="ide-note">Severity 3.</span></td>
+                  <td class="ide-src" data-label="Source"><span class="ide-chip">Wizard of Oz</span></td>
+                  <td class="ide-fix" data-label="What it changed"><span class="ide-check" aria-hidden="true"></span><span>v2: assumptions underlined in the prompt, confirmed or edited inline.</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="so-what"><span class="so-what-label">So what</span><p>My verification concept lost the first round, but testing proved the team needed it. Every failure we found became a design change.</p></div>
+      </section>
+
+      <!-- 04 FINAL DESIGN -->
+      <section id="final-design" class="phase" aria-labelledby="final-h">
+        <header class="phase-head">
+          <h2 id="final-h" class="phase-label"><span>04</span> Final design</h2>
+        </header>
+
+        <figure class="banner-fig">
+<section class="tea-banner tea-wall" aria-label="Rosetta v2 screens: translation, transcription, citations, and version history">
+  <div class="tea-wall__grid" aria-hidden="true">
+    <div class="tea-wall__col">
+      <div class="win"><div class="win__bar"><i></i><i></i><i></i></div>
+        <picture><source media="(prefers-reduced-motion: reduce)" srcset="images/tea/banner-clip-a4-still.jpg"><img src="images/tea/banner-clip-a4.webp" alt=""></picture></div>
+      <div class="brand"><em></em><div><b>TEA</b><small>Text Entry Augmentation</small></div></div>
+      <div class="win"><div class="win__bar"><i></i><i></i><i></i></div>
+        <picture><source media="(prefers-reduced-motion: reduce)" srcset="images/tea/banner-clip-a2-still.jpg"><img src="images/tea/banner-clip-a2.webp" alt=""></picture></div>
+    </div>
+    <div class="tea-wall__col">
+      <div class="win"><div class="win__bar"><i></i><i></i><i></i></div>
+        <img src="images/tea/v2-workspace.png" alt=""></div>
+      <div class="win"><div class="win__bar"><i></i><i></i><i></i></div>
+        <picture><source media="(prefers-reduced-motion: reduce)" srcset="images/tea/banner-clip-a3-still.jpg"><img src="images/tea/banner-clip-a3.webp" alt=""></picture></div>
+      <div class="brand brand--globe"><div class="globe"><img src="images/tea/globe-base.png" alt=""><img src="images/tea/globe-languages.png" alt=""></div></div>
+    </div>
+    <div class="tea-wall__col">
+      <div class="win"><div class="win__bar"><i></i><i></i><i></i></div>
+        <picture><source media="(prefers-reduced-motion: reduce)" srcset="images/tea/banner-clip-a2-still.jpg"><img src="images/tea/banner-clip-a2.webp" alt=""></picture></div>
+      <div class="win"><div class="win__bar"><i></i><i></i><i></i></div>
+        <picture><source media="(prefers-reduced-motion: reduce)" srcset="images/tea/banner-clip-b6-still.jpg"><img src="images/tea/banner-clip-b6.webp" alt=""></picture></div>
+      <div class="win"><div class="win__bar"><i></i><i></i><i></i></div>
+        <picture><source media="(prefers-reduced-motion: reduce)" srcset="images/tea/banner-clip-a4-still.jpg"><img src="images/tea/banner-clip-a4.webp" alt=""></picture></div>
+    </div>
+    <div class="tea-wall__col">
+      <div class="brand"><em></em><div><b>TEA</b><small>Rosetta v2</small></div></div>
+      <div class="win"><div class="win__bar"><i></i><i></i><i></i></div>
+        <picture><source media="(prefers-reduced-motion: reduce)" srcset="images/tea/banner-clip-a4-still.jpg"><img src="images/tea/banner-clip-a4.webp" alt=""></picture></div>
+      <div class="win"><div class="win__bar"><i></i><i></i><i></i></div>
+        <picture><source media="(prefers-reduced-motion: reduce)" srcset="images/tea/banner-clip-a3-still.jpg"><img src="images/tea/banner-clip-a3.webp" alt=""></picture></div>
+    </div>
+    <div class="tea-wall__col">
+      <div class="win"><div class="win__bar"><i></i><i></i><i></i></div>
+        <picture><source media="(prefers-reduced-motion: reduce)" srcset="images/tea/banner-clip-b6-still.jpg"><img src="images/tea/banner-clip-b6.webp" alt=""></picture></div>
+      <div class="win"><div class="win__bar"><i></i><i></i><i></i></div>
+        <img src="images/tea/v2-workspace.png" alt=""></div>
+      <div class="brand brand--globe"><div class="globe"><img src="images/tea/globe-base.png" alt=""><img src="images/tea/globe-languages.png" alt=""></div></div>
+    </div>
+  </div>
+</section>
+          <figcaption class="banner-cap">Rosetta v2, recorded from the prototype.</figcaption>
+        </figure>
+
+        <!-- Part A -->
+        <div class="part">
+          <p class="part-label">Part A &middot; Rosetta v1 &middot; built by ML teammates from my consolidated prototype</p>
+          <h3 class="takeaway takeaway--part"><span class="hl">Highlight any AI text to transform it, no prompt writing required.</span></h3>
+          <ul class="changes" role="list">
+            <li><span class="mono-label">Paper &rarr; v1</span>Sliders became one-click actions.</li>
+            <li><span class="mono-label">Paper &rarr; v1</span>Undo became side-by-side comparison.</li>
+            <li><span class="mono-label">Paper &rarr; v1</span>Hints on the first message and chat bar.</li>
+          </ul>
+          <div class="ba">
+            <div class="ba-finding"><span class="mono-label">Finding that drove the change</span><p>&ldquo;Tone match, length, translate... what???&rdquo; (usability test, about the toolbar)</p></div>
+            <figure class="figure">
+              <div class="frame">
+                <button class="zoom crop" type="button" data-zoom>
+                  <img src="images/tea/wizard-of-oz.jpg" width="832" height="642" loading="lazy" decoding="async"
+                    alt="Paper prototype toolbar with Tone Match, Complexity and Length sliders, and Translate above a response.">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <figcaption><span class="ba-tag">Before</span>Paper prototype: a toolbar of sliders and labels.</figcaption>
+            </figure>
+            <figure class="figure">
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="images/tea/v1-action-bar.png" width="1100" height="740" loading="lazy" decoding="async"
+                    alt="Rosetta v1: highlighted text in an AI answer opens a toolbar with Tone Match, Simplify, and Translate.">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <figcaption><span class="ba-tag ba-tag--after">After</span>Rosetta v1: highlight text, pick one action.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Part B -->
+        <div class="part">
+          <p class="part-label">Part B &middot; The pivot</p>
+          <h3 class="takeaway takeaway--part"><span class="hl">Faster isn't the same as trusted.</span></h3>
+          <p class="prose">The verification requirements (R2, R6, R17) were never built or tested, and the data pointed straight at them. I had the interaction design background, and the build skipped wireframes and interaction states, so I took v2 on solo.</p>
+          <div class="coverage">
+            <div class="cov cov--built">
+              <p class="mono-label">Built and tested in v1</p>
+              <div class="cov-codes"><span class="code">R11</span><span class="code">R12</span></div>
+              <p>Speed</p>
+            </div>
+            <div class="cov cov--missing">
+              <p class="mono-label">Never built or tested</p>
+              <div class="cov-codes"><span class="code">R2</span><span class="code">R6</span><span class="code">R17</span></div>
+              <p>Verification. Translation workload did not drop significantly (p = .054).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Part C -->
+        <div class="part">
+          <p class="part-label">Part C &middot; Rosetta v2 &middot; designed solo in Figma</p>
+          <h3 class="takeaway takeaway--part"><span class="hl">One workspace instead of four apps.</span></h3>
+
+          <div class="ba">
+            <div class="ba-finding"><span class="mono-label">Finding that drove the change</span><p>Translation load didn't drop (p = .054), and the verification requirements were never built.</p></div>
+            <figure class="figure">
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="images/tea/v1-action-bar.png" width="1100" height="740" loading="lazy" decoding="async"
+                    alt="Rosetta v1: a single chat column with a highlight toolbar and no link back to any source.">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <figcaption><span class="ba-tag">Before</span>Rosetta v1: one chat column, built for speed.</figcaption>
+            </figure>
+            <figure class="figure">
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="images/tea/v2-workspace.png" width="1920" height="1126" loading="lazy" decoding="async"
+                    alt="Rosetta v2: paper pane, conversation with source tags on every claim, and the Verify rail.">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <figcaption><span class="ba-tag ba-tag--after">After</span>Rosetta v2: paper, conversation, and verification in one view.</figcaption>
+            </figure>
+          </div>
+
+          <div class="block">
+            <h4 class="block-title">Layout: one job per pane</h4>
+            <figure class="figure" style="max-width: 44rem">
+              <div class="frame frame--pad">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="images/tea/v2-layout-diagram.png" width="887" height="586" loading="lazy" decoding="async"
+                    alt="Layout diagram. With Verify open: Paper 30 percent, Conversation 45 percent, Verify 25 percent. Most of the time Verify shrinks to a thin rail and the conversation grows into the free space.">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <figcaption>Verify open, and Verify collapsed (most of the time).</figcaption>
+            </figure>
+            <div class="panes">
+              <div class="pane"><p class="mono-label">Paper &middot; 30%</p><h4>Shows where the answer came from</h4><p>Scrolls to the passage the answer came from, highlighted and tagged &ldquo;Cited in answer.&rdquo;</p></div>
+              <div class="pane pane--main"><p class="mono-label">Conversation &middot; 45%</p><h4>Every claim is traceable</h4><p>Every claim carries a section and paragraph tag back to the paper. Highlight any answer to act on it.</p></div>
+              <div class="pane"><p class="mono-label">Verify &middot; 25%</p><h4>There when needed</h4><p>Collapsed to a thin rail until needed; the conversation grows into the free space. Source, Check (back-translate, flagged terms), History (versions, compare, restore).</p></div>
+            </div>
+          </div>
+
+          <div class="decision">
+            <p class="decision-head"><span>Decision callout</span><span>v2 layout</span></p>
+            <dl>
+              <div><dt>Decision</dt><dd>Three panes, one job each: Paper 30%, Conversation 45%, Verify 25% collapsed to a thin rail.</dd></div>
+              <div><dt>Why</dt><dd>It replaces the Gmail, arXiv, Preview, ChatGPT hop, and keeps a dense screen legible with one job per pane.</dd></div>
+              <div class="is-tradeoff"><dt>Tradeoff</dt><dd>Checking sits one click away instead of always on screen, so the conversation keeps the space most of the time.</dd></div>
+            </dl>
+          </div>
+
+          <div class="block evidence-wrap">
+            <table class="evidence">
+              <caption>Every micro-interaction traces to evidence</caption>
+              <thead><tr><th scope="col">Evidence</th><th scope="col">v2 micro-interaction</th></tr></thead>
+              <tbody>
+                <tr><td data-label="Evidence">&ldquo;Where can I give the paper?&rdquo; (user testing)</td><td data-label="v2 micro-interaction">Type, speak, and attach all visible on one screen</td></tr>
+                <tr><td data-label="Evidence">No feedback while recording or generating (severity 3)</td><td data-label="v2 micro-interaction">Live waveform, timer, status text that updates in sequence</td></tr>
+                <tr><td data-label="Evidence">&ldquo;Ambiguity detected&rdquo; was unclear (severity 3)</td><td data-label="v2 micro-interaction">Assumptions underlined in the prompt; confirm or edit inline</td></tr>
+                <tr><td data-label="Evidence">&ldquo;Tone match, length, translate... what???&rdquo;</td><td data-label="v2 micro-interaction">Plain verbs, each with a one-line tooltip</td></tr>
+                <tr><td data-label="Evidence">Translation load didn't drop (p = .054)</td><td data-label="v2 micro-interaction">Sentence-aligned translation, back-translate, link to source</td></tr>
+                <tr><td data-label="Evidence">Macedonian came back as Bulgarian; invented terms</td><td data-label="v2 micro-interaction">Terms with no source match flagged; wrong language caught</td></tr>
+                <tr><td data-label="Evidence">&ldquo;Can't tell whether it really changed the style&rdquo;</td><td data-label="v2 micro-interaction">Tone presets and a preview before apply</td></tr>
+                <tr><td data-label="Evidence">No undo, flagged by all five experts</td><td data-label="v2 micro-interaction">Version history with compare and restore</td></tr>
+              </tbody>
+            </table>
+            <div class="so-what"><span class="so-what-label">So what</span><p>Each one removes a reason to leave the app and double-check.</p></div>
+          </div>
+
+          <div class="block">
+            <h4 class="block-title">Walkthroughs: four recorded prototype clips</h4>
+            <div class="banner-pad">
+<section class="tea-banner tea-voice" aria-label="Rosetta v2: a prompt spoken in Burmese is transcribed, translated to English, and turned into a prompt, with the AI's assumptions reviewed before sending">
+  <div class="steps" aria-hidden="true">
+    <div class="step"><b>1</b><span>Spoken in Burmese</span><span class="wave"><i></i><i></i><i></i><i></i><i></i></span></div>
+    <div class="step"><b>2</b><span>Translated to English</span></div>
+    <div class="step"><b>3</b><span>Prompt generated</span></div>
+  </div>
+  <div class="flag" aria-hidden="true">Assumptions reviewed before sending</div>
+  <div class="tea-voice__stage" aria-hidden="true">
+    <div class="win"><div class="win__bar"><i></i><i></i><i></i><span>Review before sending</span></div>
+      <picture><source media="(prefers-reduced-motion: reduce)" srcset="images/tea/banner-clip-a2-still.jpg"><img src="images/tea/banner-clip-a2.webp" alt=""></picture></div>
+  </div>
+  <div class="tea-voice__shadow"></div>
+</section>
+            </div>
+            <div class="walks">
+              <article class="walk" id="walk-a2" aria-labelledby="walk-a2-t">
+                <div class="app-window walk-window clip">
+                  <div class="app-bar" aria-hidden="true"><span class="app-dots"><i></i><i></i><i></i></span></div>
+                  <div class="walk-screen">
+                    <picture>
+                      <source srcset="images/tea/banner-clip-a2-still.jpg" media="(prefers-reduced-motion: reduce)">
+                      <img src="images/tea/banner-clip-a2.webp" data-still="images/tea/banner-clip-a2-still.jpg" width="840" height="527" loading="lazy" decoding="async"
+                        alt="Prototype clip: the Burmese transcript, its English translation, and the generated prompt side by side, with status text updating in sequence while assumptions are reviewed.">
+                    </picture>
+                    <button class="clip-toggle" type="button">Pause</button>
+                  </div>
+                </div>
+                <div class="walk-text">
+                  <p class="walk-eyebrow">A2 Transcription</p>
+                  <h5 id="walk-a2-t" class="walk-title">Review the AI's guesses before anything is sent.</h5>
+                  <dl>
+                    <div><dt>What you're seeing</dt><dd>Transcript, English translation, and generated prompt side by side. Status updates in sequence, and &ldquo;2 assumptions to review&rdquo; becomes &ldquo;All assumptions reviewed.&rdquo;</dd></div>
+                    <div><dt>Why it works this way</dt><dd>Testers didn't understand the red &ldquo;Ambiguity detected&rdquo; card. Now guesses are underlined in place.</dd></div>
+                  </dl>
+                  <p class="walk-meta"><span class="chip chip--blue">Covers R15</span></p>
+                  <p class="walk-callout">That red card became this.</p>
+                </div>
+              </article>
+
+              <article class="walk" id="walk-a3" aria-labelledby="walk-a3-t">
+                <div class="app-window walk-window clip">
+                  <div class="app-bar" aria-hidden="true"><span class="app-dots"><i></i><i></i><i></i></span></div>
+                  <div class="walk-screen">
+                    <picture>
+                      <source srcset="images/tea/banner-clip-a3-still.jpg" media="(prefers-reduced-motion: reduce)">
+                      <img src="images/tea/banner-clip-a3.webp" data-still="images/tea/banner-clip-a3-still.jpg" width="840" height="527" loading="lazy" decoding="async"
+                        alt="Prototype clip: hovering a citation tag in the answer highlights the matching passage in the paper pane, tagged Cited in answer.">
+                    </picture>
+                    <button class="clip-toggle" type="button">Pause</button>
+                  </div>
+                </div>
+                <div class="walk-text">
+                  <p class="walk-eyebrow">A3 Citation validation</p>
+                  <h5 id="walk-a3-t" class="walk-title">Every claim points back to the paper.</h5>
+                  <dl>
+                    <div><dt>What you're seeing</dt><dd>Hover a citation to see its passage; the paper pane highlights it.</dd></div>
+                    <div><dt>Why it works this way</dt><dd>Participants cross-checked definitions across tabs and devices by hand.</dd></div>
+                  </dl>
+                  <p class="walk-meta"><span class="chip chip--blue">Covers R6</span></p>
+                  <p class="walk-callout">This is my concept that was <a href="#ideation">set aside for speed</a>, now built.</p>
+                </div>
+              </article>
+
+              <article class="walk" id="walk-a4" aria-labelledby="walk-a4-t">
+                <div class="app-window walk-window clip">
+                  <div class="app-bar" aria-hidden="true"><span class="app-dots"><i></i><i></i><i></i></span></div>
+                  <div class="walk-screen">
+                    <picture>
+                      <source srcset="images/tea/banner-clip-a4-still.jpg" media="(prefers-reduced-motion: reduce)">
+                      <img src="images/tea/banner-clip-a4.webp" data-still="images/tea/banner-clip-a4-still.jpg" width="840" height="527" loading="lazy" decoding="async"
+                        alt="Prototype clip: a bullet translated to Burmese sentence by sentence next to the English, with a flagged term fixed by Use source term so the check turns green.">
+                    </picture>
+                    <button class="clip-toggle" type="button">Pause</button>
+                  </div>
+                </div>
+                <div class="walk-text">
+                  <p class="walk-eyebrow">A4 Translation in line</p>
+                  <h5 id="walk-a4-t" class="walk-title">Translate, then check it in place.</h5>
+                  <dl>
+                    <div><dt>What you're seeing</dt><dd>Burmese lands sentence by sentence next to the English. A term with no source match is flagged; &ldquo;Use source term&rdquo; turns the check green.</dd></div>
+                    <div><dt>Why it works this way</dt><dd>Translation workload didn't drop (p = .054), and Macedonian came back as Bulgarian.</dd></div>
+                  </dl>
+                  <p class="walk-meta"><span class="chip chip--blue">Covers R17</span></p>
+                </div>
+              </article>
+
+              <article class="walk" id="walk-b6" aria-labelledby="walk-b6-t">
+                <div class="app-window walk-window clip">
+                  <div class="app-bar" aria-hidden="true"><span class="app-dots"><i></i><i></i><i></i></span></div>
+                  <div class="walk-screen">
+                    <picture>
+                      <source srcset="images/tea/banner-clip-b6-still.jpg" media="(prefers-reduced-motion: reduce)">
+                      <img src="images/tea/banner-clip-b6.webp" data-still="images/tea/banner-clip-b6-still.jpg" width="840" height="472" loading="lazy" decoding="async"
+                        alt="Prototype clip: History lists the original, simplified, translated, and tone versions, and Compare with original highlights what changed.">
+                    </picture>
+                    <button class="clip-toggle" type="button">Pause</button>
+                  </div>
+                </div>
+                <div class="walk-text">
+                  <p class="walk-eyebrow">B6 History</p>
+                  <h5 id="walk-b6-t" class="walk-title">Every version kept and easy to compare.</h5>
+                  <dl>
+                    <div><dt>What you're seeing</dt><dd>Original, simplified, translated, tone. &ldquo;Compare with original&rdquo; highlights what changed.</dd></div>
+                    <div><dt>Why it works this way</dt><dd>All five experts flagged missing undo; two rated it critical.</dd></div>
+                  </dl>
+                  <p class="walk-meta"><span class="chip chip--blue">Covers R9 and R10</span></p>
+                </div>
+              </article>
+            </div>
+            <p class="closer">Donna goes from doubting a translation to trusting it without leaving the page.</p>
+          </div>
+
+          <div class="block">
+            <h4 class="block-title">States: the translation card's lifecycle</h4>
+            <ol class="states" role="list" aria-label="Translation card states, in order">
+              <li class="state state--selected">Selected</li>
+              <li class="state-arrow" aria-hidden="true">&rarr;</li>
+              <li class="state state--translating"><span class="skel" aria-hidden="true"><i></i><i></i></span>Translating</li>
+              <li class="state-arrow" aria-hidden="true">&rarr;</li>
+              <li class="state state--look">Needs a look</li>
+              <li class="state-arrow" aria-hidden="true">&rarr;</li>
+              <li class="state state--checked">Checked</li>
+              <li class="state-arrow" aria-hidden="true">&rarr;</li>
+              <li class="state state--restored">Restored</li>
+            </ol>
+            <div class="error-msg" role="note" aria-label="Error state">
+              <span class="mono-label">Error state &middot; from contextual inquiry</span>
+              <strong>This looks like Bulgarian. Retry in Macedonian?</strong>
+            </div>
+            <p class="prose">The language check runs before render, so wrong output never looks final. The handoff sheet has twelve sections; each component lists its states and a one-line usage rule.</p>
+            <figure class="figure">
+              <div class="frame">
+                <button class="zoom" type="button" data-zoom>
+                  <img src="images/tea/handoff-sheet.png" width="1800" height="700" loading="lazy" decoding="async"
+                    alt="Handoff sheet section: highlight toolbar states (default, hover, focus, disabled), tooltip rule, assumption underline and popover, status line, and skeleton rows, each with a one-line usage rule.">
+                  <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+                </button>
+              </div>
+              <figcaption><strong>Handoff sheet,</strong> one of twelve sections.</figcaption>
+            </figure>
+            <div class="so-what"><span class="so-what-label">So what</span><p>Engineers get a buildable spec, and users never hit a dead end.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 OUTCOMES -->
+      <section id="outcomes" class="phase" aria-labelledby="outcomes-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>05</span> Outcomes</p>
+          <h2 id="outcomes-h" class="takeaway"><span class="hl">Faster on both tasks, easier on only one.</span></h2>
+        </header>
+
+        <figure class="dotplot" aria-labelledby="dp-cap">
+          <div class="dp-legend" aria-hidden="true">
+            <span><span class="dot is-on"></span> Felt less workload</span>
+            <span><span class="dot"></span> Did not</span>
+          </div>
+          <div class="dp-row">
+            <div><p class="dp-name">Tone</p><p class="dp-sub">Email to a professor</p></div>
+            <div class="dp-dots" role="img" aria-label="Tone task: 12 of 14 participants felt less workload.">
+              <span class="dot is-on"></span><span class="dot is-on"></span><span class="dot is-on"></span><span class="dot is-on"></span><span class="dot is-on"></span><span class="dot is-on"></span><span class="dot is-on"></span><span class="dot is-on"></span><span class="dot is-on"></span><span class="dot is-on"></span><span class="dot is-on"></span><span class="dot is-on"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+            <div class="dp-stats">
+              <p><strong>16% faster</strong> (p = .028)</p>
+              <p><strong>12 of 14</strong> felt less workload (p = .037)</p>
+            </div>
+          </div>
+          <div class="dp-row">
+            <div><p class="dp-name">Translation</p><p class="dp-sub">Translate to Spanish</p></div>
+            <div class="dp-dots" role="img" aria-label="Translation task: 9 of 14 participants felt less workload. 5 of 14 got a faster translation and no less work.">
+              <span class="dp-bracket-label" aria-hidden="true">5 of 14: faster translation, no less work</span>
+              <span class="dp-bracket" aria-hidden="true"></span>
+              <span class="dot is-on"></span><span class="dot is-on"></span><span class="dot is-on"></span><span class="dot is-on"></span><span class="dot is-on"></span><span class="dot is-on"></span><span class="dot is-on"></span><span class="dot is-on"></span><span class="dot is-on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+            <div class="dp-stats">
+              <p><strong>26% faster</strong> (p = .025)</p>
+              <p><strong>Only 9 of 14</strong> felt less workload <span class="ns">(not significant, p = .054)</span></p>
+            </div>
+          </div>
+          <figcaption id="dp-cap">Each dot is one participant. Rosetta v1.</figcaption>
+        </figure>
+
+        <div class="so-what"><span class="so-what-label">So what</span><p>Speed improved on both tasks, but translation relief was uneven. A faster translation still has to be checked for meaning, and v1 gave no way to check it. That is v2's job.</p></div>
+
+        <details class="raw">
+          <summary>Raw values</summary>
+          <div class="raw-body">
+            <table>
+              <thead><tr><th scope="col">Task</th><th scope="col">Time</th><th scope="col">Effect</th><th scope="col">NASA-TLX</th><th scope="col">Test</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Tone</th><td>238.7s to 201.1s</td><td>d = .56</td><td>3.20 to 2.49</td><td>Wilcoxon W = 81, r = .48</td></tr>
+                <tr><th scope="row">Translation</th><td>148.5s to 109.8s</td><td>d = .58</td><td>2.80 to 2.00</td><td>W = 59.5, p = .054, r = .43</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+
+        <div class="impact">
+          <div class="frame">
+            <img src="images/tea/umgpt-logo.png" width="544" height="166" loading="lazy" decoding="async" alt="U-M GPT logo">
+          </div>
+          <div>
+            <p class="mono-label">Impact</p>
+            <p style="margin-top: var(--s2); font-weight: 600;">Won a competitive pitch to U-M ITS built on TEA's trust insight, then onboarded to support UMGPT. Details are under NDA.</p>
+          </div>
+        </div>
+
+        <div class="block">
+          <h3 class="block-title">How v2 would be built and measured (planned)</h3>
+          <div class="plan">
+            <div class="plan-col">
+              <p class="mono-label">Build</p>
+              <ul>
+                <li>Gemini returns paired English and Burmese sentences as structured output, which enables aligned rows.</li>
+                <li>Language detection runs on output before render.</li>
+                <li>Terms are matched against the source passage, not the model's own confidence.</li>
+                <li>The generated prompt exposes assumptions as editable spans.</li>
+              </ul>
+            </div>
+            <div class="plan-col">
+              <p class="mono-label">Measure</p>
+              <ul>
+                <li>Rerun the same within-subjects study.</li>
+                <li>Add time-to-verify and error-catch rate.</li>
+                <li><strong>Success: translation load drops significantly, not just time.</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 REFLECTION -->
+      <section id="reflection" class="phase" aria-labelledby="reflection-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>06</span> Reflection</p>
+          <h2 id="reflection-h" class="takeaway"><span class="hl">Anyone acting on AI output needs to see what the model assumed.</span></h2>
+        </header>
+
+        <ol class="learnings" role="list">
+          <li><span class="learn-n" aria-hidden="true">1</span><h3>Numbers and research need each other.</h3><p>The study showed v1 was faster. The research showed why translation still felt like work. Neither alone would have found the gap v2 closes.</p></li>
+          <li><span class="learn-n" aria-hidden="true">2</span><h3>Design interaction states before the build.</h3><p>Undo and system status were the top issues in testing. Designing states first would have caught them.</p></li>
+          <li><span class="learn-n" aria-hidden="true">3</span><h3>Test verification, not just speed.</h3><p>We measured time and load. Trust needs its own measure, which v2 adds.</p></li>
+        </ol>
+
+        <div class="measures" role="img" aria-label="Measures: the v1 study measured time and workload. The v2 plan adds time-to-verify and error-catch rate.">
+          <div><p class="mono-label">Measured in the v1 study</p><div class="states"><span class="state">Time</span><span class="state">Workload (NASA-TLX)</span></div></div>
+          <p class="measure-arrow" aria-hidden="true">+</p>
+          <div><p class="mono-label">Added for v2</p><div class="states"><span class="state state--selected">Time-to-verify</span><span class="state state--selected">Error-catch rate</span></div></div>
+        </div>
+
+        <div class="block">
+          <h3 class="block-title">Where I've applied it since</h3>
+          <ul class="applied" role="list">
+            <li class="applied-card">
+              <p class="applied-eyebrow">Lesson: faster isn't the same as trusted</p>
+              <h4 class="applied-title">I built a winning pitch on it</h4>
+              <p class="applied-body">I centered a competitive pitch to U-M ITS on TEA's trust finding. It won, and I was onboarded to support UMGPT (details under NDA).</p>
+            </li>
+            <li class="applied-card">
+              <p class="applied-eyebrow">Lesson: show what the model assumed</p>
+              <h4 class="applied-title">I carry it into AI policy research</h4>
+              <p class="applied-body">At the Center for Democracy and Technology, I research AI companionship and dark patterns in conversational AI, where people act on what a model says without seeing what it assumed.</p>
+            </li>
+            <li class="applied-card applied-card--next">
+              <div class="applied-head"><p class="applied-eyebrow">Lesson: test verification, not just speed</p><span class="chip chip--blue">Next</span></div>
+              <h4 class="applied-title">Next: AI that speaks for players</h4>
+              <p class="applied-body">Any feature that translates or generates text on a player's behalf should show its assumptions and let them check it in place. I'd measure success by time-to-verify and error-catch rate, not speed alone.</p>
+            </li>
+          </ul>
+          <a class="applied-bridge" href="anchor.html">After TEA, I knew to design the states and the checks before the build, not after. <span aria-hidden="true">&rarr;</span><span class="sr-only"> Next case study</span></a>
+        </div>
+      </section>
+
+      <!-- 07 THE LONG VIEW -->
+      <section id="long-view" class="phase" aria-labelledby="long-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>07</span> The long view</p>
+          <h2 id="long-h" class="takeaway"><span class="hl">As AI translation becomes default, users will need verification built in, not bolted on.</span></h2>
+        </header>
+
+        <div class="rings-wrap">
+          <div class="rings" role="img" aria-label="Three nested circles. Center: researchers reading papers, today. Middle: classrooms. Outer: global communities where players and creators meet across dozens of languages.">
+            <div class="ring ring--3" aria-hidden="true"><span>Global communities of players and creators</span></div>
+            <div class="ring ring--2" aria-hidden="true"><span>Classrooms</span></div>
+            <div class="ring ring--1" aria-hidden="true"><span>Today: researchers reading papers</span></div>
+          </div>
+          <div class="prose">
+            <p>Today, TEA serves researchers reading papers. Over the next few years, the same pattern (show the source, flag what the model assumed, verify in place) applies anywhere people rely on AI to communicate across languages, from classrooms to global communities where players and creators meet across dozens of languages.</p>
+            <p>As AI translation becomes default, users will need verification built in, not bolted on, and policy will increasingly expect it.</p>
+          </div>
+        </div>
+      </section>
+
+      <nav class="case-next" aria-label="More work">
+        <a class="next-link" href="anchor.html">
+          <span class="eyebrow">Next case</span>
+          <span class="next-title">Anchor: one place for a career search &rarr;</span>
+        </a>
+        <a class="site-home" href="index.html#work">&larr; Back to all work</a>
+      </nav>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Sabrina May</p>
+    <ul class="footer-links" role="list">
+      <li><a href="resume/Sabrina_May_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
+      <li><a href="https://www.linkedin.com/in/sabrinasmay" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:maysab@umich.edu">Email</a></li>
+    </ul>
+  </div>
+</footer>
+
+<dialog id="lightbox" class="lightbox" aria-label="Enlarged image">
+  <div class="lightbox-bar"><button class="lightbox-close" type="button">Close (Esc)</button></div>
+  <div class="lightbox-stage"><img alt=""></div>
+  <p class="lightbox-caption"></p>
+</dialog>
+<script src="js/tea-globe.js" defer></script>
+</body>
+</html>

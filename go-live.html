@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="js/gate.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waypoint: context that travels with the work | Sabrina May</title>
+<meta name="description" content="Case study: Waypoint is a go-live companion for implementation PMs that carries context through a hospital software go-live, from onsite orientation to a verified correction.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=IBM+Plex+Mono:wght@500;600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body class="page-case page-golive">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-bar site-bar--case">
+  <div class="container site-bar-inner">
+    <a class="site-home" href="index.html">&larr; All work</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html#why-roblox">Why Roblox</a>
+      <a class="nav-cta" href="resume/Sabrina_May_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- Hero -->
+  <section class="tea-hero" aria-labelledby="gl-hero-title">
+    <div class="container tea-hero-grid">
+      <div class="tea-hero-text">
+        <p class="eyebrow">Case study 03</p>
+        <h1 id="gl-hero-title" class="tea-hero-title">Waypoint: <span class="gold">context</span> that travels with the work</h1>
+        <p class="tea-hero-sub">Sabrina May, product designer, solo concept</p>
+        <dl class="tea-hero-facts">
+          <div><dt>The goal</dt><dd>Stop project managers from leaving the task to find the context.</dd></div>
+          <div><dt>Built</dt><dd>A clickable build of Miami General Hospital, from brief to verified correction.</dd></div>
+        </dl>
+      </div>
+      <div class="gl-hero-visual">
+            <div class="app-window gl-hero-win">
+              <div class="app-bar" aria-hidden="true"><span class="app-dots"><i></i><i></i><i></i></span><span class="app-title">Waypoint</span></div>
+              <div class="live" data-src="waypoint.html?embed=1#map">
+                <div class="live-poster"><span class="live-chip">Live prototype</span><span class="live-name">Map</span></div>
+                <a class="live-open" href="waypoint.html#map" target="_blank" rel="noopener">Open full screen <span aria-hidden="true">&nearr;</span><span class="sr-only"> (Map, opens in a new tab)</span></a>
+              </div>
+            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Opening human moment -->
+  <figure class="an-opening">
+    <div class="container">
+      <blockquote><p>&ldquo;I kept leaving the task in front of me to find the context somewhere else.&rdquo;</p></blockquote>
+      <figcaption>From my years as an implementation project manager on hospital software go-lives.</figcaption>
+    </div>
+  </figure>
+
+  <!-- TL;DR on a sky stage -->
+  <header class="sky-stage" aria-labelledby="cs-title">
+    <div class="container">
+      <p class="eyebrow tl-eyebrow">Case study 03</p>
+      <h2 id="cs-title" class="cs-title">Waypoint: a go-live companion for implementation PMs</h2>
+      <p class="cs-summary">Waypoint is an operational companion that carries a project manager's context through a hospital software go-live, from onsite orientation to a verified correction.</p>
+      <ul class="meta-pills" role="list" style="padding-top: 20px; padding-bottom: 20px">
+        <li class="pill"><span class="pill-label">Role</span><span class="pill-value">Product designer, solo</span></li>
+        <li class="pill"><span class="pill-label">Type</span><span class="pill-value">Design intervention, concept</span></li>
+        <li class="pill"><span class="pill-label">Domain</span><span class="pill-value">Healthcare operations</span></li>
+        <li class="pill"><span class="pill-label">Scope</span><span class="pill-value">Workflow mapping, IA, interaction design, working build</span></li>
+        <li class="pill"><span class="pill-label">Tools</span><span class="pill-value">FigJam, Figma, Claude</span></li>
+        <li class="pill"><span class="pill-label">Data</span><span class="pill-value">Synthetic</span></li>
+      </ul>
+      <figure class="figure app-fig" id="gl-hero-mock">
+<section class="tea-banner gl-hero" aria-label="Waypoint live views: a discrepancy reported from the map, an amendment awaiting verification, and today's brief">
+  <div class="hm-back" aria-hidden="true">
+    <span class="tag">Today's brief</span>
+    <div class="win"><div class="win__bar"><i></i><i></i><i></i></div><div class="live live--deco" data-src="waypoint.html?embed=1#today" aria-hidden="true">
+                <div class="live-poster"><span class="live-chip">Live prototype</span><span class="live-name">Today</span></div>
+              </div></div>
+  </div>
+  <div class="hm-main" aria-hidden="true">
+    <div class="win"><div class="win__bar"><i></i><i></i><i></i><span>Waypoint</span></div>
+      <div class="shot">
+        <div class="live live--deco" data-src="waypoint.html?embed=1#discrepancy" aria-hidden="true">
+                <div class="live-poster"><span class="live-chip">Live prototype</span><span class="live-name">Discrepancy</span></div>
+              </div>
+        <div class="pin" style="left: 38%; top: 42%;"><b>1</b><span>Report from the map, context attached</span></div>
+        <div class="pin pin--hide-sm" style="left: 62%; top: 70%;"><b>2</b><span>Ownership always named</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="hm-front" aria-hidden="true">
+    <span class="tag">Amended, awaiting verification</span>
+    <div class="win"><div class="win__bar"><i></i><i></i><i></i></div><div class="live live--deco" data-src="waypoint.html?embed=1#amendment" aria-hidden="true">
+                <div class="live-poster"><span class="live-chip">Live prototype</span><span class="live-name">Amendment</span></div>
+              </div></div>
+  </div>
+</section>
+        <figcaption>Live views from the working build. All hospital, device, and staff data is synthetic.</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <section class="results-band" aria-label="What the design delivers">
+    <div class="container">
+      <p class="r-kicker">What the design delivers</p>
+      <ul class="results" role="list">
+        <li><span class="r-num r-yellow">11 to 1</span><span class="r-label">places the PM had to check, carried in one companion</span></li>
+        <li><span class="r-num r-mint">12</span><span class="r-label">steps in the hero flow, proven in lo-fi before any code</span></li>
+        <li><span class="r-num r-mint">Zero</span><span class="r-label">retyping of hospital, unit, room, or device across map, issue, amendment, and chat</span></li>
+      </ul>
+      <p class="r-foot">Concept with synthetic data. Not yet tested with project managers.</p>
+    </div>
+  </section>
+
+  <section class="roles-section" aria-label="Role">
+    <div class="container">
+      <div class="role-split role-split--solo">
+        <section class="role role--me" aria-labelledby="role-me">
+          <h2 id="role-me" class="role-title"><span class="block-icon" aria-hidden="true"></span>What I did</h2>
+          <ul>
+            <li>Mapped my own go-live pain points</li>
+            <li>Synthesized them into one root problem</li>
+            <li>Scoped and cut the feature set</li>
+            <li>Designed the IA, lo-fi storyboard, and hero interaction</li>
+            <li>Built the working prototype with Claude from my storyboard, implementing decisions I had already made</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process timeline -->
+  <section class="process" aria-labelledby="process-label">
+    <div class="tl2-floor" aria-hidden="true"><div class="tl2-plane"></div></div>
+    <div class="container">
+      <div class="tl2-head">
+        <div>
+          <p class="eyebrow">Process at a glance</p>
+          <h2 id="process-label" class="tl2-title">Solo, from my own pain points to a working build.</h2>
+        </div>
+        <ul class="tl2-legend" role="list">
+          <li><span class="gblock gblock--y" aria-hidden="true"></span>Mine</li>
+        </ul>
+      </div>
+      <div class="tl2-lanes" aria-hidden="true"><span class="lane-h lane-h--r">Research</span><span class="lane-h lane-h--d">Design</span></div>
+      <ol class="tl2" role="list">
+        <li class="tl-step tl-r" style="--row: 1 / span 2; --i: 0">
+          <div class="tl-card is-mine">
+            <span class="tl-marker gblock gblock--y" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 01</span><span class="lane-tag">Research</span><span class="tl-pill tl-pill--mine">Me</span></p>
+            <p class="tl-main"><strong class="tl-title">Pain points in FigJam, in trip order</strong></p>
+          </div>
+        </li>
+        <li class="tl-step tl-r" style="--row: 3 / span 2; --i: 1">
+          <div class="tl-card is-mine">
+            <span class="tl-marker gblock gblock--y" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 02</span><span class="lane-tag">Research</span><span class="tl-pill tl-pill--mine">Me</span></p>
+            <p class="tl-main"><strong class="tl-title">Affinity map, four themes</strong></p>
+          </div>
+        </li>
+        <li class="tl-step tl-r" style="--row: 5 / span 2; --i: 2">
+          <div class="tl-card is-mine">
+            <span class="tl-marker gblock gblock--y" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 03</span><span class="lane-tag">Research</span><span class="tl-pill tl-pill--mine">Me</span></p>
+            <p class="tl-main"><strong class="tl-title">Root problem defined</strong></p>
+          </div>
+          <p class="tl-note tl-note--left">Four themes, one repeated behavior.</p>
+        </li>
+        <li class="tl-step tl-d" style="--row: 6 / span 2; --i: 3">
+          <div class="tl-card is-mine">
+            <span class="tl-marker gblock gblock--y" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 04</span><span class="lane-tag">Design</span><span class="tl-pill tl-pill--mine">Me</span></p>
+            <p class="tl-main"><strong class="tl-title">Scope and cuts</strong></p>
+          </div>
+          <p class="tl-note tl-note--right">Cutting real frustrations on purpose.</p>
+        </li>
+        <li class="tl-step tl-d" style="--row: 8 / span 2; --i: 4">
+          <div class="tl-card is-mine">
+            <span class="tl-marker gblock gblock--y" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 05</span><span class="lane-tag">Design</span><span class="tl-pill tl-pill--mine">Me</span></p>
+            <p class="tl-main"><strong class="tl-title">Information architecture</strong></p>
+          </div>
+        </li>
+        <li class="tl-step tl-d" style="--row: 10 / span 2; --i: 5">
+          <div class="tl-card is-mine">
+            <span class="tl-marker gblock gblock--y" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 06</span><span class="lane-tag">Design</span><span class="tl-pill tl-pill--mine">Me</span></p>
+            <p class="tl-main"><strong class="tl-title">Lo-fi storyboard, 12-step hero flow</strong></p>
+          </div>
+        </li>
+        <li class="tl-step tl-d" style="--row: 12 / span 2; --i: 6">
+          <div class="tl-card is-mine">
+            <span class="tl-marker gblock gblock--y" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 07</span><span class="lane-tag">Design</span><span class="tl-pill tl-pill--mine">Me</span></p>
+            <p class="tl-main"><strong class="tl-title">Hero interaction</strong></p>
+          </div>
+        </li>
+        <li class="tl-step tl-d" style="--row: 14 / span 3; --i: 7">
+          <div class="tl-card is-mine is-finale">
+            <span class="tl-marker gblock gblock--y" aria-hidden="true"></span>
+            <p class="tl-top"><span class="tl-num">STEP 08</span><span class="lane-tag">Design</span><span class="tl-pill tl-pill--mine">Me</span></p>
+            <p class="tl-main"><strong class="tl-title">Final Prototype</strong></p>
+          </div>
+          <p class="tl-note tl-note--right">Implementing decisions, not discovering them in code.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="container cs-layout">
+    <nav class="phase-nav" aria-label="Case study sections">
+      <button class="phase-toggle" type="button" aria-expanded="false" aria-controls="phase-list">
+        <span><span class="phase-toggle-label">Section: </span><span class="phase-current">00 Problem</span></span>
+        <span class="phase-toggle-caret" aria-hidden="true">&#9662;</span>
+      </button>
+      <ol id="phase-list" class="phase-list" role="list">
+        <li><a href="#problem"><span>00</span> Problem</a></li>
+        <li><a href="#research"><span>01</span> Research</a></li>
+        <li><a href="#synthesis"><span>02</span> Synthesis</a></li>
+        <li><a href="#ideation"><span>03</span> Ideation</a></li>
+        <li><a href="#final-design"><span>04</span> Final design</a></li>
+        <li><a href="#outcomes"><span>05</span> Outcomes</a></li>
+        <li><a href="#reflection"><span>06</span> Reflection</a></li>
+        <li><a href="#long-view"><span>07</span> The long view</a></li>
+      </ol>
+    </nav>
+
+    <div class="cs-content">
+
+      <!-- 00 PROBLEM -->
+      <section id="problem" class="phase" aria-labelledby="problem-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>00</span> Problem</p>
+          <h2 id="problem-h" class="takeaway">The context doesn't travel with the work.</h2>
+        </header>
+
+        <figure class="figure">
+          <div class="gl-orbit">
+            <div class="gl-task"><p class="gl-task-label">The task in front of me</p><p class="gl-task-title">Fix a device issue</p></div>
+            <ul class="gl-sources" role="list" aria-label="Eleven places to check">
+            <li style="--a: calc(-90deg + 0.000deg)">Email threads</li>
+            <li style="--a: calc(-90deg + 32.727deg)">Travel system</li>
+            <li style="--a: calc(-90deg + 65.455deg)">Staffing list</li>
+            <li style="--a: calc(-90deg + 98.182deg)">Project system</li>
+            <li style="--a: calc(-90deg + 130.909deg)">Hospital floor plans</li>
+            <li style="--a: calc(-90deg + 163.636deg)">Client device records</li>
+            <li style="--a: calc(-90deg + 196.364deg)">Secure messaging</li>
+            <li style="--a: calc(-90deg + 229.091deg)">Ticketing</li>
+            <li style="--a: calc(-90deg + 261.818deg)">Hospital IT</li>
+            <li style="--a: calc(-90deg + 294.545deg)">Technical support</li>
+            <li style="--a: calc(-90deg + 327.273deg)">Coworkers</li>
+            </ul>
+          </div>
+          <figcaption>Eleven places I might visit to finish one task already in front of me.</figcaption>
+        </figure>
+
+        <div class="block">
+          <h3 class="block-title">The loop</h3>
+          <div class="gl-loop-wrap">
+            <ol class="gl-loop" role="list">
+              <li><span class="gl-n">01</span>Leave the current task</li>
+              <li><span class="gl-n">02</span>Find another system or person</li>
+              <li><span class="gl-n">03</span>Reconstruct the missing context</li>
+              <li><span class="gl-n">04</span>Return and resume</li>
+            </ol>
+            <span class="gl-loop-center" aria-hidden="true">&#8635;</span>
+          </div>
+        </div>
+
+        <div class="so-what"><span class="so-what-label">So what</span><p>The problem isn't too many apps. The PM has become the integration layer. The fix is a companion that brings context to the moment it's needed, not a dashboard that shows everything.</p></div>
+      </section>
+
+      <!-- 01 RESEARCH -->
+      <section id="research" class="phase" aria-labelledby="research-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>01</span> Research</p>
+          <h2 id="research-h" class="takeaway">Kept raw, it read like a complaint. Grouped, it became a diagnosis.</h2>
+        </header>
+
+        <p class="gl-lead">I wrote every frustration from memory in the order it happens on a trip, before analyzing anything.</p>
+
+        <figure class="figure">
+          <div class="app-window">
+            <div class="app-bar" aria-hidden="true"><span class="app-dots"><i></i><i></i><i></i></span><span class="app-title">FigJam</span></div>
+            <div class="frame">
+              <button class="zoom" type="button" data-zoom>
+                <img src="images/go-live/painpoints.png" loading="lazy" decoding="async" alt="FigJam board titled Walking through user pain points chronologically: red sticky notes for project manager pain points in trip order, yellow notes for potential solutions">
+                <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+              </button>
+            </div>
+          </div>
+          <figcaption>Pain points in red, in trip order. Potential solutions in yellow.</figcaption>
+        </figure>
+
+        <div class="so-what"><span class="so-what-label">So what</span><p>Ordering by the trip, not by severity, showed where friction stacks up: arriving onsite with a clinician waiting.</p></div>
+      </section>
+
+      <!-- 02 SYNTHESIS -->
+      <section id="synthesis" class="phase" aria-labelledby="synthesis-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>02</span> Synthesis</p>
+          <h2 id="synthesis-h" class="takeaway">Four themes. One behavior underneath them.</h2>
+        </header>
+
+        <figure class="figure">
+            <div class="frame">
+              <button class="zoom" type="button" data-zoom>
+                <img src="images/go-live/affinity.png" loading="lazy" decoding="async" alt="Affinity map grouping the pain points into four themes: logistics and admin, orientation and wayfinding, people and communication, and operational context and knowledge, plus a moment to design">
+                <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+              </button>
+            </div>
+            <figcaption>Affinity map from my pain points.</figcaption>
+          </figure>
+
+        <ul class="ide-skim ide-skim--4" role="list" aria-label="Four themes">
+          <li class="ide-skim-card ide-skim-card--blue"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">Logistics and admin</p></div></li>
+          <li class="ide-skim-card ide-skim-card--blue"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">Orientation and wayfinding</p></div></li>
+          <li class="ide-skim-card ide-skim-card--blue"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">People and communication</p></div></li>
+          <li class="ide-skim-card ide-skim-card--blue"><span class="gblock" aria-hidden="true"></span><div><p class="ide-skim-title">Operational context</p></div></li>
+        </ul>
+
+        <p class="walk-callout">These were analytical categories, not navigation. The obvious move was to ship four tabs named after them. I didn't.</p>
+
+        <div class="so-what"><span class="so-what-label">So what</span><p>Every theme traced back to the same loop: leave, search, reconstruct, return.</p></div>
+      </section>
+
+      <!-- 03 IDEATION -->
+      <section id="ideation" class="phase" aria-labelledby="ideation-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>03</span> Ideation</p>
+          <h2 id="ideation-h" class="takeaway">I cut real problems on purpose to design the one that mattered.</h2>
+        </header>
+
+        <dl class="gl-scope">
+          <div><dt>Primary user</dt><dd>An implementation PM onsite.</dd></div>
+          <div><dt>Window</dt><dd>Final preparation through active onsite support, where scattered information turns into immediate friction.</dd></div>
+        </dl>
+
+        <div class="block">
+          <h3 class="block-title">Golden journey</h3>
+          <div class="gl-journey-wrap" tabindex="0" role="region" aria-label="Golden journey, scrolls sideways on small screens">
+            <ol class="gl-journey" role="list">
+              <li><span class="gl-n">01</span>Prepare</li>
+              <li><span class="gl-n">02</span>Arrive</li>
+              <li><span class="gl-n">03</span>Orient</li>
+              <li><span class="gl-n">04</span>Support</li>
+              <li class="is-hero"><span class="gl-n">05</span>Encounter issue</li>
+              <li class="is-hero"><span class="gl-n">06</span>Investigate</li>
+              <li class="is-hero"><span class="gl-n">07</span>Coordinate</li>
+              <li><span class="gl-n">08</span>Resolve</li>
+            </ol>
+            <div class="gl-journey-mark"><span>Hero interaction</span></div>
+          </div>
+        </div>
+
+        <div class="gl-kc">
+          <div class="gl-kc-kept">
+            <h3>Kept</h3>
+            <ul role="list"><li>Today brief</li><li>Onsite floor and unit map</li><li>Staff and role context</li><li>Create an issue from location and device</li><li>Permitted device information</li><li>Similar issue retrieval</li><li>Routing, ownership, status</li><li>Amendments</li></ul>
+          </div>
+          <div class="gl-kc-cut">
+            <h3>Cut</h3>
+            <ul role="list"><li>Full reimbursement</li><li>Full travel management</li><li>Generic dashboard metrics</li><li>Rebuilding secure messaging</li></ul>
+          </div>
+        </div>
+
+        <dl class="ide-tradeoff">
+          <div><dt>Decision</dt><dd>Cut reimbursement and travel, even though they were real frustrations.</dd></div>
+          <div><dt>Why</dt><dd>They're administrative problems that already have owners elsewhere.</dd></div>
+          <div class="is-tradeoff"><dt>Tradeoff</dt><dd>The product doesn't fix every pain I listed, so it can fix the costly one well.</dd></div>
+        </dl>
+
+        <div class="block">
+          <h3 class="block-title">Information architecture</h3>
+          <div class="gl-ia">
+            <div class="gl-tree">
+              <p class="gl-tree-root">Waypoint</p>
+              <ul role="list">
+                <li><strong>Today</strong><span>Assignment, shift, unit, team, active issues</span></li>
+                <li><strong>Map</strong><span>Building-wide wayfinding, unit map with clickable devices</span></li>
+                <li><strong>Issues</strong><span>Similar-issue retrieval, routing with a recommended owner</span></li>
+                <li><strong>People</strong><span>Staff and role context</span></li>
+                <li><strong>Chats</strong><span>Secure chat with Hospital IT</span></li>
+                <li><strong>Amendments</strong><span>Original and proposed values, verification status</span></li>
+                <li><strong>Project</strong></li>
+              </ul>
+              <p class="gl-tree-across"><span class="gblock" aria-hidden="true"></span>AI assistant in every view: narrow questions against permitted records</p>
+            </div>
+            <figure class="figure">
+              <div class="gl-object" role="img" aria-label="Workstation WS-ER-14 at the center, referenced on the map, in an issue, in an amendment, and in a chat">
+                <span class="gl-obj-core"><small>Workstation</small>WS-ER-14</span>
+                <span class="gl-obj-n gl-obj-n--t">On the map</span>
+                <span class="gl-obj-n gl-obj-n--l">In a chat</span>
+                <span class="gl-obj-n gl-obj-n--r">In an issue</span>
+                <span class="gl-obj-n gl-obj-n--b">In an amendment</span>
+              </div>
+              <figcaption>Map, issue, amendment, person, and chat reference the same objects, so nothing is retyped.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="block">
+          <h3 class="block-title">Lo-fi</h3>
+          <div class="fig-grid fig-grid--2">
+            <figure class="figure">
+            <div class="frame">
+              <button class="zoom" type="button" data-zoom>
+                <img src="images/go-live/storyboard.png" loading="lazy" decoding="async" alt="Low-fi interaction storyboard: product shell and wayfinding, the 10-step hero flow from today briefing to amendment detail, the AI naming check and secure handoff, and what the wireframes must prove">
+                <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+              </button>
+            </div>
+            <figcaption>Lo-fi interaction storyboard.</figcaption>
+          </figure>
+            <figure class="figure">
+            <div class="frame">
+              <button class="zoom" type="button" data-zoom>
+                <img src="images/go-live/lofi-clean.png" loading="lazy" decoding="async" alt="Cleaned lo-fi draft: whole-building wayfinding map of Miami General Hospital and the hero interaction flow for workstation WS-ER-14">
+                <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+              </button>
+            </div>
+            <figcaption>Cleaned lo-fi draft: wayfinding map and hero flow.</figcaption>
+          </figure>
+          </div>
+          <figure class="figure">
+            <div class="frame">
+              <button class="zoom" type="button" data-zoom>
+                <img src="images/go-live/nextsteps.png" loading="lazy" decoding="async" alt="Six FigJam columns: product thesis, user and scope, golden journey, features and cuts, working slice, and AI versus human, each with a decision and its thought process">
+                <span class="zoom-hint" aria-hidden="true">Enlarge</span><span class="sr-only">Open larger view</span>
+              </button>
+            </div>
+            <figcaption>Six scoping decisions between the affinity map and the wireframes.</figcaption>
+          </figure>
+        </div>
+
+        <div class="block">
+          <h3 class="block-title">What the wireframes had to prove</h3>
+          <ul class="gl-chips" role="list">
+            <li class="chip chip--y">Context carries forward</li>
+            <li class="chip chip--y">Humans flag physical reality</li>
+            <li class="chip chip--y">Humans confirm consequential changes</li>
+            <li class="chip chip--y">Ownership is always explicit</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 04 FINAL DESIGN -->
+      <section id="final-design" class="phase" aria-labelledby="final-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>04</span> Final design</p>
+          <h2 id="final-h" class="takeaway">The floor plan became where issues start.</h2>
+        </header>
+
+        <div class="gl-scenario">
+          <p class="gl-scenario-label">Scenario <span class="chip chip--blue">Synthetic data</span></p>
+          <p class="gl-scenario-text">At Miami General Hospital, the record says workstation WS-ER-14 is in ER-105, Exam Room 3. Standing in the unit, the PM sees it in ER-110, Triage Bay 2.</p>
+          <div class="gl-compare">
+            <div class="gl-rec"><p class="gl-rec-label">System record</p><p class="gl-rec-val">ER-105, Exam Room 3</p></div>
+            <span class="gl-vs" aria-hidden="true">vs</span>
+            <div class="gl-rec gl-rec--obs"><p class="gl-rec-label">Observed onsite</p><p class="gl-rec-val">ER-110, Triage Bay 2</p></div>
+          </div>
+        </div>
+
+        <div class="gl-pair">
+          <figure class="gl-ai">
+            <div class="gl-bubble">
+              <p class="gl-bubble-who"><span class="gblock" aria-hidden="true"></span>Assistant</p>
+              <p>&ldquo;These locations differ. I can create an amendment for Hospital IT to verify.&rdquo;</p>
+            </div>
+            <figcaption>It doesn't say the database is wrong, and it doesn't move the device.</figcaption>
+          </figure>
+          <div class="gl-amd" role="group" aria-label="Amendment AMD-018">
+            <div class="gl-amd-head"><span class="gl-amd-id">AMD-018</span><span class="state state--look">Amended, awaiting verification</span></div>
+            <dl>
+              <div><dt>Object</dt><dd>WS-ER-14</dd></div>
+              <div><dt>Original</dt><dd>ER-105</dd></div>
+              <div><dt>Proposed</dt><dd>ER-110</dd></div>
+              <div><dt>Assigned to</dt><dd>Hospital IT</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <figure class="figure gl-states">
+          <ol class="states" role="list" aria-label="Amendment states, in order">
+            <li class="state state--selected">Submitted</li>
+            <li class="state-arrow" aria-hidden="true">&rarr;</li>
+            <li class="state state--look">Awaiting verification</li>
+            <li class="state-arrow" aria-hidden="true">&rarr;</li>
+            <li class="state state--checked">Verified</li>
+            <li class="state-arrow" aria-hidden="true">&rarr;</li>
+            <li class="state state--restored">Applied</li>
+          </ol>
+          <p class="gl-alt">Terminal alternative: <span class="state state--rejected">Rejected</span></p>
+          <figcaption>Amber means somebody still has to look.</figcaption>
+        </figure>
+
+        <div class="block">
+          <h3 class="block-title">Walkthroughs: four live views</h3>
+          <div class="walks">
+            <article class="walk" id="walk-today" aria-labelledby="walk-today-t">
+              <div class="app-window walk-window">
+              <div class="app-bar" aria-hidden="true"><span class="app-dots"><i></i><i></i><i></i></span><span class="app-title">Waypoint</span></div>
+              <div class="live" data-src="waypoint.html?embed=1#today">
+                <div class="live-poster"><span class="live-chip">Live prototype</span><span class="live-name">Today's brief</span></div>
+                <a class="live-open" href="waypoint.html#today" target="_blank" rel="noopener">Open full screen <span aria-hidden="true">&nearr;</span><span class="sr-only"> (Today's brief, opens in a new tab)</span></a>
+              </div>
+            </div>
+              <div class="walk-text">
+                <p class="walk-eyebrow">Today</p>
+                <h4 id="walk-today-t" class="walk-title">Today's brief</h4>
+                <dl><div><dt>What you're seeing</dt><dd>Assignment, shift, unit, team, and active issues before arrival.</dd></div></dl>
+              </div>
+            </article>
+
+            <article class="walk" id="walk-discrepancy" aria-labelledby="walk-discrepancy-t">
+              <div class="app-window walk-window">
+              <div class="app-bar" aria-hidden="true"><span class="app-dots"><i></i><i></i><i></i></span><span class="app-title">Waypoint</span></div>
+              <div class="live" data-src="waypoint.html?embed=1#discrepancy">
+                <div class="live-poster"><span class="live-chip">Live prototype</span><span class="live-name">Report from the map</span></div>
+                <a class="live-open" href="waypoint.html#discrepancy" target="_blank" rel="noopener">Open full screen <span aria-hidden="true">&nearr;</span><span class="sr-only"> (Report from the map, opens in a new tab)</span></a>
+              </div>
+            </div>
+              <div class="walk-text">
+                <p class="walk-eyebrow">Map</p>
+                <h4 id="walk-discrepancy-t" class="walk-title">Report from the map</h4>
+                <dl><div><dt>What you're seeing</dt><dd>Tap a device, and hospital, unit, room, and device are already attached.</dd></div></dl>
+              </div>
+            </article>
+
+            <article class="walk" id="walk-amendment" aria-labelledby="walk-amendment-t">
+              <div class="app-window walk-window">
+              <div class="app-bar" aria-hidden="true"><span class="app-dots"><i></i><i></i><i></i></span><span class="app-title">Waypoint</span></div>
+              <div class="live" data-src="waypoint.html?embed=1#amendment">
+                <div class="live-poster"><span class="live-chip">Live prototype</span><span class="live-name">Correct without overwriting</span></div>
+                <a class="live-open" href="waypoint.html#amendment" target="_blank" rel="noopener">Open full screen <span aria-hidden="true">&nearr;</span><span class="sr-only"> (Correct without overwriting, opens in a new tab)</span></a>
+              </div>
+            </div>
+              <div class="walk-text">
+                <p class="walk-eyebrow">Amendments</p>
+                <h4 id="walk-amendment-t" class="walk-title">Correct without overwriting</h4>
+                <dl><div><dt>What you're seeing</dt><dd>Original and proposed values both stay visible until Hospital IT verifies. The lifecycle runs Submitted, Awaiting verification, Verified, Applied.</dd></div></dl>
+              </div>
+            </article>
+
+            <article class="walk" id="walk-printer-check" aria-labelledby="walk-printer-check-t">
+              <div class="app-window walk-window">
+              <div class="app-bar" aria-hidden="true"><span class="app-dots"><i></i><i></i><i></i></span><span class="app-title">Waypoint</span></div>
+              <div class="live" data-src="waypoint.html?embed=1#printer-check">
+                <div class="live-poster"><span class="live-chip">Live prototype</span><span class="live-name">Ask a narrow question</span></div>
+                <a class="live-open" href="waypoint.html#printer-check" target="_blank" rel="noopener">Open full screen <span aria-hidden="true">&nearr;</span><span class="sr-only"> (Ask a narrow question, opens in a new tab)</span></a>
+              </div>
+            </div>
+              <div class="walk-text">
+                <p class="walk-eyebrow">Naming check</p>
+                <h4 id="walk-printer-check-t" class="walk-title">Ask a narrow question</h4>
+                <dl><div><dt>What you're seeing</dt><dd>&ldquo;Is LABPRNTR402 the correct printer name for ER-110?&rdquo; The assistant compares the naming convention, the registered identifier, and the observed identifier, then drafts a report that opens a secure chat with Hospital IT, without exposing the full device inventory.</dd></div></dl>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="gl-decisions">
+          <div class="decision">
+            <p class="decision-head"><span>Decision callout</span><span>Reporting</span></p>
+            <dl>
+              <div><dt>Decision</dt><dd>Every device on the map is a reporting surface.</dd></div>
+              <div><dt>Why</dt><dd>No sensor knows a workstation was moved; the only source of truth is a person in the room.</dd></div>
+              <div class="is-tradeoff"><dt>Tradeoff</dt><dd>The map is no longer read-only, so reporting must stay lightweight.</dd></div>
+            </dl>
+          </div>
+          <div class="decision">
+            <p class="decision-head"><span>Decision callout</span><span>AI scope</span></p>
+            <dl>
+              <div><dt>Decision</dt><dd>AI answers narrow questions against permitted records.</dd></div>
+              <div><dt>Why</dt><dd>PMs often lack clearance to browse device data, which creates dead ends.</dd></div>
+              <div class="is-tradeoff"><dt>Tradeoff</dt><dd>The PM gets an answer, not the client's full inventory.</dd></div>
+            </dl>
+          </div>
+          <div class="decision">
+            <p class="decision-head"><span>Decision callout</span><span>Verification</span></p>
+            <dl>
+              <div><dt>Decision</dt><dd>Corrections stay pending until Hospital IT verifies.</dd></div>
+              <div><dt>Why</dt><dd>In a hospital, the audit trail is the point.</dd></div>
+              <div class="is-tradeoff"><dt>Tradeoff</dt><dd>The fix is useful immediately but not authoritative until reviewed.</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="gl-kc gl-kc--roles">
+          <div class="gl-kc-ai">
+            <h3>AI does</h3>
+            <ul role="list"><li>Retrieve relevant context</li><li>Connect permitted sources</li><li>Recognize similar issues</li><li>Prefill details</li><li>Suggest a likely owner</li></ul>
+          </div>
+          <div class="gl-kc-human">
+            <h3>The human does</h3>
+            <ul role="list"><li>Observe physical reality</li><li>Verify context</li><li>Edit or reject suggestions</li><li>Approve the amendment</li><li>Resolve and close</li></ul>
+          </div>
+        </div>
+
+        <div class="gl-actions">
+          <a class="gl-btn" href="waypoint.html" target="_blank" rel="noopener">Open the working build <span aria-hidden="true">&nearr;</span><span class="sr-only"> (opens in a new tab)</span></a>
+          <a class="gl-btn gl-btn--ghost" href="https://www.figma.com/board/IAUcR1b5uCFWMPvw8deSbZ/Untitled?node-id=0-1" target="_blank" rel="noopener">See the FigJam <span aria-hidden="true">&nearr;</span><span class="sr-only"> (opens in a new tab)</span></a>
+        </div>
+      </section>
+
+      <!-- 05 OUTCOMES -->
+      <section id="outcomes" class="phase" aria-labelledby="outcomes-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>05</span> Outcomes</p>
+          <h2 id="outcomes-h" class="takeaway">A working build, and four questions I'd test first.</h2>
+        </header>
+
+        <div class="gl-built">
+          <h3>Built</h3>
+          <p>Seven views (Today, Map, Issues, People, Chats, Amendments, Project), building-wide wayfinding, a unit map with clickable devices, the discrepancy-to-amendment flow, the naming check that opens a secure chat, similar-issue retrieval, and routing with a recommended owner.</p>
+        </div>
+
+        <div class="block">
+          <h3 class="block-title">Test plan</h3>
+          <ol class="gl-tests" role="list">
+            <li><span class="gl-n">01</span><p>Does starting from the map remove re-entry, or do PMs still reach for familiar systems?</p></li>
+            <li><span class="gl-n">02</span><p>Can a PM tell an amended value from a confirmed one at a glance, mid-shift?</p></li>
+            <li><span class="gl-n">03</span><p>Does a narrow AI answer about protected data feel trustworthy, or evasive?</p></li>
+            <li><span class="gl-n">04</span><p>Does explicit ownership reduce messaging around to find who acts next?</p></li>
+          </ol>
+        </div>
+
+        <div class="honest"><span class="honest-label">Honesty note</span><p>The part I'm least sure about is the amendment. It's the right systems answer, but it asks a busy PM to accept the fix isn't finished. If that friction is unacceptable, I'd redesign the verification handoff, not let the app overwrite the record.</p></div>
+      </section>
+
+      <!-- 06 REFLECTION -->
+      <section id="reflection" class="phase" aria-labelledby="reflection-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>06</span> Reflection</p>
+          <h2 id="reflection-h" class="takeaway">Group the pain before you design the product.</h2>
+        </header>
+
+        <ol class="learnings" role="list">
+          <li><span class="learn-n" aria-hidden="true">1</span><h3>Diagnose before designing.</h3><p>The affinity map turned a list of complaints into one root cause.</p></li>
+          <li><span class="learn-n" aria-hidden="true">2</span><h3>Cut on purpose.</h3><p>Leaving out real frustrations let the core interaction be excellent.</p></li>
+          <li><span class="learn-n" aria-hidden="true">3</span><h3>Model uncertainty, don't hide it.</h3><p>Pending states and named owners keep people accountable for consequential changes.</p></li>
+        </ol>
+
+        <div class="block">
+          <h3 class="block-title">Where I've applied it since</h3>
+          <ul class="applied" role="list">
+            <li class="applied-card">
+              <p class="applied-eyebrow">Lesson: diagnose before designing</p>
+              <h4 class="applied-title">I turned my Epic experience into the brief</h4>
+              <p class="applied-body">The operational instincts from supporting go-lives became a structured problem, scope, and design.</p>
+            </li>
+            <li class="applied-card">
+              <p class="applied-eyebrow">Lesson: decide before you build</p>
+              <h4 class="applied-title">I built with AI only after the storyboard</h4>
+              <p class="applied-body">Every behavior was settled in lo-fi first, so the build implemented decisions instead of improvising them.</p>
+            </li>
+            <li class="applied-card applied-card--next">
+              <div class="applied-head"><p class="applied-eyebrow">Lesson: context should travel with the work</p><span class="chip chip--blue">Next</span></div>
+              <h4 class="applied-title">Tools for creators at scale</h4>
+              <p class="applied-body">When something breaks in a live experience, who owns it, what changed, and whether it's verified should travel with the issue, not live in someone's memory.</p>
+            </li>
+          </ul>
+          <a class="applied-bridge" href="index.html#work">Across all three cases, I start by finding the right first problem. <span aria-hidden="true">&rarr;</span><span class="sr-only"> Back to all work</span></a>
+        </div>
+      </section>
+
+      <!-- 07 THE LONG VIEW -->
+      <section id="long-view" class="phase" aria-labelledby="long-h">
+        <header class="phase-head">
+          <p class="phase-label"><span>07</span> The long view</p>
+          <h2 id="long-h" class="takeaway">From one go-live to the whole implementation.</h2>
+        </header>
+        <p class="gl-lv">Over a few years, the same object model could extend beyond the go-live window to the full implementation lifecycle and across hospitals, with permissions, provenance, and audit history as shared building blocks rather than features bolted onto each screen.</p>
+      </section>
+
+      <nav class="case-next" aria-label="More work">
+        <a class="next-link" href="anchor.html">
+          <span class="eyebrow">Previous case</span>
+          <span class="next-title">&larr; Anchor: one place for a career search</span>
+        </a>
+        <a class="site-home" href="index.html#work">&larr; Back to all work</a>
+      </nav>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Sabrina May</p>
+    <ul class="footer-links" role="list">
+      <li><a href="resume/Sabrina_May_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
+      <li><a href="https://www.linkedin.com/in/sabrinasmay" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:maysab@umich.edu">Email</a></li>
+    </ul>
+  </div>
+</footer>
+
+<dialog id="lightbox" class="lightbox" aria-label="Enlarged image">
+  <div class="lightbox-bar"><button class="lightbox-close" type="button">Close (Esc)</button></div>
+  <div class="lightbox-stage"><img alt=""></div>
+  <p class="lightbox-caption"></p>
+</dialog>
+</body>
+</html>
