@@ -365,7 +365,7 @@ a:hover { text-decoration-thickness: 2px; }
   .hero-layout { grid-template-columns: minmax(0, 1fr) auto; column-gap: var(--s6); }
   .hero-figure {
     grid-column: 2; grid-row: 1 / span 2; align-self: end;
-    position: relative; margin: 0; width: clamp(12rem, 20vw, 18rem);
+    position: relative; z-index: 3; margin: 0; translate: 0 100px; width: clamp(18rem, 30vw, 27rem);
   }
   .hero-figure .avatar { display: block; width: 100%; height: auto; }
   .hero-layout .sticker { position: absolute; left: 50%; bottom: 0; translate: -58% 0; min-width: 13.5rem; }
@@ -2371,3 +2371,52 @@ a:hover { text-decoration-thickness: 2px; }
 /* Case card covers */
 .case-card-media--cover { padding: 0; overflow: hidden; }
 .case-card-media--cover img { display: block; width: 100%; height: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 0; box-shadow: none; }
+
+/* Simplified hero: name and role */
+.hero-title.hero-name { max-width: none; font-size: var(--t-hero); line-height: 0.95; }
+.hero-sub.hero-role { margin-top: var(--s4); max-width: none; font-weight: 500; font-size: var(--t-lg); line-height: 1.3; color: var(--navy); }
+@media (min-width: 48rem) { .hero-layout { align-items: end; } .hero-layout .hero-title { align-self: end; } .hero-layout .hero-sub { align-self: start; } }
+
+/* Simplified Why Roblox: solid navy, plain text */
+.why.why--plain { background: #0E1A3A; padding-block: var(--s9); }
+.why.why--plain::after { content: none; }
+.why-plain { display: grid; gap: 20px; justify-items: start; }
+.why-plain-title { margin-bottom: var(--s3); font-family: var(--font-display); font-weight: 800; font-size: var(--t-2xl); line-height: 1; letter-spacing: -0.03em; color: #F4F6FB; }
+.why-plain p { max-width: 680px; font-family: var(--font-body); font-weight: 400; font-size: 18px; line-height: 1.6; color: #E3E8F3; text-align: left; text-wrap: pretty; }
+
+/* Why Roblox: paragraph summaries as glass cards on a connected spine */
+.why-plain { justify-items: stretch; }
+.why-rows { display: grid; gap: 20px; }
+.why-row { display: grid; gap: var(--s3); justify-items: start; }
+.why-plain .why-text { max-width: 680px; }
+.why-tag-cell { position: relative; display: flex; }
+.why-tag {
+  position: relative; z-index: 1; margin: 0;
+  padding: 0.55rem 1.1rem; border-radius: 999px;
+  background: linear-gradient(160deg, rgb(255 255 255 / 0.14), rgb(255 255 255 / 0.03));
+  -webkit-backdrop-filter: blur(14px) saturate(140%); backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid rgb(255 255 255 / 0.28);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.35), 0 8px 24px rgb(4 10 30 / 0.35);
+  font-family: var(--font-body); font-weight: 700; font-size: 0.95rem; line-height: 1.2; color: #F4F6FB;
+}
+@media (min-width: 56rem) {
+  .why-row { grid-template-columns: minmax(0, 680px) minmax(14rem, 1fr); column-gap: var(--s7); align-items: center; }
+  .why-row .why-text { grid-column: 1; grid-row: 1; }
+  .why-row .why-tag-cell { grid-column: 2; grid-row: 1; align-self: stretch; align-items: center; justify-content: center; justify-self: stretch; }
+  .why-tag { min-width: 12rem; padding: 1rem 1.5rem; border-radius: 18px; text-align: center; font-size: 1.125rem; }
+  /* Horizontal connector from each card back to its paragraph */
+  .why-tag-cell::before {
+    content: ""; position: absolute; top: 50%; height: 1px; translate: 0 -50%;
+    left: calc(-1 * var(--s7) + 12px); right: 50%;
+    background: linear-gradient(to right, rgb(184 196 222 / 0), rgb(184 196 222 / 0.4) 30%);
+  }
+  .why-tag-cell::after {
+    content: ""; position: absolute; top: 50%; left: calc(-1 * var(--s7) + 8px); width: 7px; height: 7px;
+    translate: 0 -50%; border-radius: 50%; background: rgb(184 196 222 / 0.55);
+  }
+}
+
+/* Let the avatar step 100px down onto the ground without being clipped */
+@media (min-width: 48rem) {
+  .hero { overflow-x: clip; overflow-y: visible; z-index: 2; }
+}
